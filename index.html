@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Butterfly Bloom Child Development Center - Expert Speech Therapy, Occupational Therapy, ABA, Special Education & more in Visakhapatnam. Wish Believe Bloom.">
-    <meta name="keywords" content="child development center, speech therapy, occupational therapy, ABA therapy, special education, Visakhapatnam, autism therapy, behavioral intervention">
-    <title>Butterfly Bloom CDC | Child Development Center Visakhapatnam</title>
+    <meta name="description" content="Butterfly Bloom Child Development Center - RCI Registered, 8+ Years Experience, 500+ Families Served. Expert Speech Therapy, Occupational Therapy, ABA, Special Education in Visakhapatnam.">
+    <title>Butterfly Bloom CDC | Helping Children Grow with Confidence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -141,6 +140,13 @@
             line-height: 1.2;
         }
 
+        .hero h2 .highlight {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .tagline {
             font-size: 1.8rem;
             color: var(--primary-pink);
@@ -197,8 +203,46 @@
             color: white;
         }
 
-        /* Services */
-        .services {
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary-purple), #7B3FA8);
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        /* About Section */
+        .about {
             padding: 6rem 2rem;
             background: white;
         }
@@ -207,31 +251,54 @@
             text-align: center;
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
-            color: var(--primary-purple);
+            color: var(--dark);
             margin-bottom: 1rem;
             font-weight: 800;
         }
 
+        .section-title .highlight {
+            color: var(--primary-purple);
+        }
+
         .section-subtitle {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #666;
             margin-bottom: 4rem;
-            max-width: 700px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services */
+        .services {
+            padding: 6rem 2rem;
+            background: var(--cream);
         }
 
         .services-grid {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
         }
 
         .service-card {
-            background: linear-gradient(135deg, #FFF 0%, var(--cream) 100%);
+            background: white;
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -264,55 +331,137 @@
             line-height: 1.7;
         }
 
-        /* Why Choose */
-        .why-choose {
+        /* Philosophy */
+        .philosophy {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
-        .features-grid {
+        .philosophy-grid {
             max-width: 1400px;
             margin: 3rem auto 0;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
 
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
+        .philosophy-card {
+            background: linear-gradient(135deg, #FFF 0%, var(--cream) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary-pink);
         }
 
-        .feature-icon {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+        .philosophy-icon {
             font-size: 3rem;
-            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
-        .feature-card h3 {
+        .philosophy-card h3 {
             color: var(--primary-purple);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        .feature-card p {
+        .philosophy-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Safe Environment */
+        .safe-environment {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+            text-align: center;
+        }
+
+        .safe-environment h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .safe-environment p {
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .blog-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .blog-card {
+            background: var(--cream);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(94, 42, 132, 0.15);
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            color: var(--primary-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog-card p {
             color: #666;
             font-size: 1rem;
             line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary-pink);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--primary-purple);
         }
 
         /* Contact */
         .contact {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .contact-wrapper {
@@ -377,6 +526,8 @@
             justify-content: center;
             font-size: 1.8rem;
             transition: all 0.3s;
+            text-decoration: none;
+            color: white;
         }
 
         .social-icon:hover {
@@ -385,7 +536,7 @@
         }
 
         .form-container {
-            background: var(--cream);
+            background: white;
             padding: 3rem;
             border-radius: 25px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.1);
@@ -544,7 +695,8 @@
             }
 
             .services-grid,
-            .features-grid {
+            .philosophy-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -555,6 +707,11 @@
             .btn-primary,
             .btn-secondary {
                 width: 100%;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
             }
         }
     </style>
@@ -572,8 +729,10 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -587,7 +746,7 @@
     <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>Nurturing Every Child's Potential</h2>
+            <h2><span class="highlight">Helping Children Grow with Confidence</span></h2>
             <p class="tagline">Wish • Believe • Bloom</p>
             <p>Expert child development services in Visakhapatnam. We provide comprehensive therapy and support for children with special needs, helping them reach their full potential through evidence-based interventions.</p>
             <div class="hero-buttons">
@@ -597,20 +756,62 @@
         </div>
     </section>
 
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon">🏅</div>
+                <div class="stat-number">RCI</div>
+                <div class="stat-label">Registered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">👨‍👩‍👧‍👦</div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Families Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label">Therapy Sessions</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="section-title">About <span class="highlight">Butterfly Bloom</span></h2>
+        <p class="section-subtitle">Dedicated to helping children achieve their developmental milestones through compassionate, evidence-based therapy approaches.</p>
+        <div class="about-content">
+            <p>With over 8 years of specialized experience in pediatric therapy, we are passionate about creating a nurturing environment where children can thrive and reach their full potential.</p>
+            <p>Our multi-modal therapy approach combines evidence-based practices with creative, play-based interventions that make therapy engaging and effective for children of all abilities.</p>
+            <p>We believe every child is unique, and we work closely with families to develop personalized treatment plans that address each child's specific needs, interests, and developmental stage.</p>
+        </div>
+    </section>
+
     <!-- Services -->
     <section class="services" id="services">
-        <h2 class="section-title">Our Comprehensive Services</h2>
-        <p class="section-subtitle">We offer a wide range of specialized therapies and interventions tailored to each child's unique needs</p>
+        <h2 class="section-title">Therapies <span class="highlight">Offered</span></h2>
+        <p class="section-subtitle">Comprehensive therapeutic services designed to support your child's development across all areas of growth and learning.</p>
         <div class="services-grid">
             <div class="service-card">
-                <span class="service-icon">🗣️</span>
+                <span class="service-icon">💬</span>
                 <h3>Speech Therapy</h3>
-                <p>Expert speech and language intervention to improve communication skills and confidence.</p>
+                <p>Supporting communication development and language skills for clear expression.</p>
             </div>
             <div class="service-card">
-                <span class="service-icon">🧩</span>
+                <span class="service-icon">🎓</span>
+                <h3>Special Education</h3>
+                <p>Individualized learning approaches for children with diverse educational needs.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">✋</span>
                 <h3>Occupational Therapy</h3>
-                <p>Sensory integration and fine motor skill development for daily living activities.</p>
+                <p>Developing fine motor skills and daily living activities for independence.</p>
             </div>
             <div class="service-card">
                 <span class="service-icon">🎯</span>
@@ -618,17 +819,7 @@
                 <p>Evidence-based strategies to support positive behavior and emotional regulation.</p>
             </div>
             <div class="service-card">
-                <span class="service-icon">📚</span>
-                <h3>Special Education</h3>
-                <p>Individualized learning programs tailored to each child's unique needs.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🍎</span>
-                <h3>Pediatric Therapeutic Diet</h3>
-                <p>Nutritional guidance and dietary interventions for optimal development.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🎓</span>
+                <span class="service-icon">🧠</span>
                 <h3>ABA Therapy</h3>
                 <p>Applied Behavior Analysis for autism spectrum and developmental disorders.</p>
             </div>
@@ -636,6 +827,16 @@
                 <span class="service-icon">💭</span>
                 <h3>CBT</h3>
                 <p>Cognitive Behavioral Therapy to address anxiety and emotional challenges.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🍎</span>
+                <h3>Pediatric Therapeutic Diet</h3>
+                <p>Nutritional guidance and dietary interventions for optimal development.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">👨‍⚕️</span>
+                <h3>Consultations</h3>
+                <p>Professional assessments and personalized treatment planning.</p>
             </div>
             <div class="service-card">
                 <span class="service-icon">🏠</span>
@@ -655,40 +856,73 @@
             <div class="service-card">
                 <span class="service-icon">🎵</span>
                 <h3>Music Therapy</h3>
-                <p>Therapeutic music interventions for emotional expression.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🧠</span>
-                <h3>Sensory Integration</h3>
-                <p>Specialized sensory activities to improve processing and regulation.</p>
+                <p>Therapeutic music interventions for emotional expression and development.</p>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose -->
-    <section class="why-choose" id="about">
-        <h2 class="section-title">Why Choose Butterfly Bloom CDC?</h2>
-        <p class="section-subtitle">We are committed to providing the highest quality care and support for every child</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Expert Team</h3>
-                <p>Certified therapists with years of experience in child development</p>
+    <!-- Philosophy -->
+    <section class="philosophy" id="philosophy">
+        <h2 class="section-title">Treatment <span class="highlight">Philosophy</span></h2>
+        <p class="section-subtitle">My approach combines compassionate care with evidence-based practices to create the most effective therapeutic experience for your child.</p>
+        <div class="philosophy-grid">
+            <div class="philosophy-card">
+                <span class="philosophy-icon">🎯</span>
+                <h3>Child-Centered Approach</h3>
+                <p>Every therapy session is tailored to your child's unique needs, interests, and developmental stage.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Personalized Care</h3>
-                <p>Individualized treatment plans tailored to each child's needs</p>
+            <div class="philosophy-card">
+                <span class="philosophy-icon">✨</span>
+                <h3>Play-Based Learning</h3>
+                <p>Making therapy fun and engaging through play, ensuring children look forward to each session.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <h3>Evidence-Based</h3>
-                <p>Proven therapeutic approaches backed by research</p>
+            <div class="philosophy-card">
+                <span class="philosophy-icon">🛡️</span>
+                <h3>Evidence-Driven</h3>
+                <p>Using research-backed methods and continuously adapting based on your child's progress.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">❤️</div>
-                <h3>Compassionate Environment</h3>
-                <p>Safe, nurturing space where children thrive</p>
+            <div class="philosophy-card">
+                <span class="philosophy-icon">👨‍👩‍👧</span>
+                <h3>Family Collaboration</h3>
+                <p>Working together with parents to ensure consistency and support at home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safe Environment -->
+    <section class="safe-environment">
+        <h2>Creating a Safe & Engaging Environment</h2>
+        <p>I believe that children learn best when they feel safe, understood, and engaged. My therapy space is designed to be welcoming and stimulating, where children can explore, learn, and grow at their own pace while building confidence and skills that will serve them throughout their lives.</p>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog" id="blog">
+        <h2 class="section-title">Latest <span class="highlight">Insights</span></h2>
+        <p class="section-subtitle">Expert advice and resources for parents navigating child development</p>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-date">December 15, 2025</div>
+                    <h3>Understanding Speech Delays in Children</h3>
+                    <p>Learn about the signs of speech delays, when to seek help, and how early intervention can make a significant difference in your child's communication development.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-date">December 10, 2025</div>
+                    <h3>The Power of Play-Based Therapy</h3>
+                    <p>Discover how play-based interventions create engaging, effective therapy sessions that children love while achieving developmental goals.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-date">December 5, 2025</div>
+                    <h3>Supporting Your Child at Home</h3>
+                    <p>Practical strategies and activities parents can implement at home to reinforce therapy goals and support their child's development.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -724,14 +958,16 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon">📷</a>
-                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon">💬</a>
+                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon" title="Follow us on Instagram">📷</a>
+                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon" title="Chat on WhatsApp">💬</a>
                 </div>
             </div>
             
             <div class="form-container">
                 <h3>Book a Consultation</h3>
                 <form action="https://formspree.io/f/xanyqvvv" method="POST">
+                    <input type="hidden" name="_to" value="hello@butterflybloomcdc.com">
+                    <input type="hidden" name="_subject" value="New Consultation Request - Butterfly Bloom CDC">
                     <div class="form-group">
                         <label for="name">Parent/Guardian Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -741,8 +977,8 @@
                         <input type="tel" id="phone" name="phone" required placeholder="+91-XXXXXXXXXX">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
                         <label for="child-age">Child's Age *</label>
@@ -758,6 +994,9 @@
                             <option value="Special Education">Special Education</option>
                             <option value="ABA Therapy">ABA Therapy</option>
                             <option value="CBT">CBT</option>
+                            <option value="Vision Therapy">Vision Therapy</option>
+                            <option value="Music Therapy">Music Therapy</option>
+                            <option value="Parent Training">Parent Training</option>
                             <option value="Other">Other Services</option>
                         </select>
                     </div>
@@ -783,8 +1022,10 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#philosophy">Philosophy</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -795,6 +1036,8 @@
                     <li>Occupational Therapy</li>
                     <li>ABA & CBT</li>
                     <li>Special Education</li>
+                    <li>Parent Training</li>
+                    <li>Vision & Music Therapy</li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -802,6 +1045,10 @@
                 <p>📞 <a href="tel:+918019589810">+91-8019589810</a></p>
                 <p>✉️ <a href="mailto:hello@butterflybloomcdc.com">hello@butterflybloomcdc.com</a></p>
                 <p>📍 MVP Colony, Visakhapatnam</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon">📷</a>
+                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon">💬</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
