@@ -5,32 +5,578 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Butterfly Bloom Child Development Center - Expert Speech Therapy, Occupational Therapy, ABA, Special Education & more in Visakhapatnam. Wish Believe Bloom.">
     <meta name="keywords" content="child development center, speech therapy, occupational therapy, ABA therapy, special education, Visakhapatnam, autism therapy, behavioral intervention">
-    <meta name="theme-color" content="#5E2A84">
     <title>Butterfly Bloom CDC | Child Development Center Visakhapatnam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-orange: #FF8C42;
+            --primary-pink: #E91E63;
+            --primary-purple: #5E2A84;
+            --cream: #FFF8F0;
+            --dark: #2C2C2C;
+            --light: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--light);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        .logo-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-purple);
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-pink);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            color: white !important;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary-purple);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            color: var(--primary-pink);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-purple);
+            padding: 1.2rem 3rem;
+            border: 3px solid var(--primary-purple);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-purple);
+            color: white;
+        }
+
+        /* Services */
+        .services {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #FFF 0%, var(--cream) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(94, 42, 132, 0.15);
+            border-color: var(--primary-pink);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose */
+        .why-choose {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .contact-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-purple), #7B3FA8);
+            padding: 3rem;
+            border-radius: 25px;
+            color: white;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .social-icon {
+            width: 55px;
+            height: 55px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .form-container {
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+
+        .form-container h3 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(233, 30, 99, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-purple);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo-container">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-15T11-07-37-230Z-b0b683b7-chat-image-1765796857211-0.jpg" alt="Butterfly Bloom CDC Logo">
+            <div class="logo">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-15T11-07-37-230Z-b0b683b7-chat-image-1765796857211-0.jpg" alt="Butterfly Bloom CDC">
                 <div class="logo-text">
                     <h1>Butterfly Bloom</h1>
                     <p>Child Development Center</p>
                 </div>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Book Consultation</a>
-            <div class="mobile-menu" id="mobile-menu">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,7 +584,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h2>Nurturing Every Child's Potential</h2>
@@ -51,93 +597,95 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="services" id="services">
         <h2 class="section-title">Our Comprehensive Services</h2>
+        <p class="section-subtitle">We offer a wide range of specialized therapies and interventions tailored to each child's unique needs</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🗣️</div>
+                <span class="service-icon">🗣️</span>
                 <h3>Speech Therapy</h3>
                 <p>Expert speech and language intervention to improve communication skills and confidence.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🧩</div>
+                <span class="service-icon">🧩</span>
                 <h3>Occupational Therapy</h3>
                 <p>Sensory integration and fine motor skill development for daily living activities.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🎯</div>
+                <span class="service-icon">🎯</span>
                 <h3>Behavioral Intervention</h3>
                 <p>Evidence-based strategies to support positive behavior and emotional regulation.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📚</div>
+                <span class="service-icon">📚</span>
                 <h3>Special Education</h3>
-                <p>Individualized learning programs tailored to each child's unique needs and abilities.</p>
+                <p>Individualized learning programs tailored to each child's unique needs.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🍎</div>
+                <span class="service-icon">🍎</span>
                 <h3>Pediatric Therapeutic Diet</h3>
-                <p>Nutritional guidance and dietary interventions for optimal child development.</p>
+                <p>Nutritional guidance and dietary interventions for optimal development.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">👨‍⚕️</div>
-                <h3>Consultations</h3>
-                <p>Professional assessments and personalized treatment planning for your child.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎓</div>
+                <span class="service-icon">🎓</span>
                 <h3>ABA Therapy</h3>
                 <p>Applied Behavior Analysis for autism spectrum and developmental disorders.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💭</div>
+                <span class="service-icon">💭</span>
                 <h3>CBT</h3>
-                <p>Cognitive Behavioral Therapy to address anxiety, fears, and emotional challenges.</p>
+                <p>Cognitive Behavioral Therapy to address anxiety and emotional challenges.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏠</div>
+                <span class="service-icon">🏠</span>
                 <h3>Home Plans</h3>
                 <p>Customized home-based therapy programs for consistent progress.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">👨‍👩‍👧</div>
+                <span class="service-icon">👨‍👩‍👧</span>
                 <h3>Parent Training</h3>
                 <p>Empowering parents with strategies and techniques for home support.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">👁️</div>
+                <span class="service-icon">👁️</span>
                 <h3>Vision Therapy</h3>
                 <p>Visual processing and eye coordination exercises for learning support.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🎵</div>
+                <span class="service-icon">🎵</span>
                 <h3>Music Therapy</h3>
-                <p>Therapeutic music interventions for emotional expression and development.</p>
+                <p>Therapeutic music interventions for emotional expression.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🧠</span>
+                <h3>Sensory Integration</h3>
+                <p>Specialized sensory activities to improve processing and regulation.</p>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Why Choose -->
     <section class="why-choose" id="about">
         <h2 class="section-title">Why Choose Butterfly Bloom CDC?</h2>
+        <p class="section-subtitle">We are committed to providing the highest quality care and support for every child</p>
         <div class="features-grid">
-            <div class="feature-item">
+            <div class="feature-card">
                 <div class="feature-icon">✨</div>
                 <h3>Expert Team</h3>
                 <p>Certified therapists with years of experience in child development</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-card">
                 <div class="feature-icon">🎯</div>
                 <h3>Personalized Care</h3>
                 <p>Individualized treatment plans tailored to each child's needs</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-card">
                 <div class="feature-icon">🏆</div>
                 <h3>Evidence-Based</h3>
                 <p>Proven therapeutic approaches backed by research</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-card">
                 <div class="feature-icon">❤️</div>
                 <h3>Compassionate Environment</h3>
                 <p>Safe, nurturing space where children thrive</p>
@@ -145,10 +693,11 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <!-- Contact -->
+    <section class="contact" id="contact">
         <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
+        <p class="section-subtitle">Schedule a consultation and let us help your child reach their full potential</p>
+        <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Visit Us</h3>
                 <div class="info-item">
@@ -175,12 +724,12 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon" title="Instagram" aria-label="Visit our Instagram">📷</a>
-                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon" title="WhatsApp" aria-label="Contact us on WhatsApp">💬</a>
+                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon">📷</a>
+                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon">💬</a>
                 </div>
             </div>
             
-            <div class="enquiry-form">
+            <div class="form-container">
                 <h3>Book a Consultation</h3>
                 <form action="https://formspree.io/f/xanyqvvv" method="POST">
                     <div class="form-group">
@@ -209,15 +758,12 @@
                             <option value="Special Education">Special Education</option>
                             <option value="ABA Therapy">ABA Therapy</option>
                             <option value="CBT">CBT</option>
-                            <option value="Vision Therapy">Vision Therapy</option>
-                            <option value="Music Therapy">Music Therapy</option>
-                            <option value="Parent Training">Parent Training</option>
                             <option value="Other">Other Services</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Tell us about your concerns</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Please describe your child's needs or any specific concerns..."></textarea>
+                        <textarea id="message" name="message" placeholder="Please describe your child's needs..."></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Submit Enquiry</button>
                 </form>
@@ -231,7 +777,7 @@
             <div class="footer-section">
                 <h4>Butterfly Bloom CDC</h4>
                 <p>Empowering children to reach their full potential through expert care and evidence-based therapies.</p>
-                <p style="margin-top: 1rem; font-style: italic;">Wish • Believe • Bloom</p>
+                <p style="margin-top: 1rem; font-style: italic; font-weight: 600;">Wish • Believe • Bloom</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -249,8 +795,6 @@
                     <li>Occupational Therapy</li>
                     <li>ABA & CBT</li>
                     <li>Special Education</li>
-                    <li>Parent Training</li>
-                    <li>Vision & Music Therapy</li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -258,10 +802,6 @@
                 <p>📞 <a href="tel:+918019589810">+91-8019589810</a></p>
                 <p>✉️ <a href="mailto:hello@butterflybloomcdc.com">hello@butterflybloomcdc.com</a></p>
                 <p>📍 MVP Colony, Visakhapatnam</p>
-                <div class="social-links" style="margin-top: 1rem;">
-                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" class="social-icon" title="Instagram">📷</a>
-                    <a href="https://wa.me/918019589810" target="_blank" class="social-icon" title="WhatsApp">💬</a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -269,6 +809,32 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
