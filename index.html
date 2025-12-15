@@ -395,10 +395,168 @@
             color: #555;
         }
 
+        /* Professional Credentials */
+        .credentials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .credentials-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .credential-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            border: 2px solid #F0F0F0;
+            transition: all 0.3s;
+        }
+
+        .credential-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-pink);
+            box-shadow: 0 20px 50px rgba(94, 42, 132, 0.15);
+        }
+
+        .credential-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .credential-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .credential-card .subtitle {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .credential-card p {
+            color: #777;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .why-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .why-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(94, 42, 132, 0.15);
+        }
+
+        .why-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .why-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 6rem;
+            color: var(--primary-purple);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-purple);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-role {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
         /* Blog Section */
         .blog {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .blog-grid {
@@ -410,7 +568,7 @@
         }
 
         .blog-card {
-            background: var(--cream);
+            background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -461,7 +619,7 @@
         /* Contact */
         .contact {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
         .contact-wrapper {
@@ -536,7 +694,7 @@
         }
 
         .form-container {
-            background: white;
+            background: var(--cream);
             padding: 3rem;
             border-radius: 25px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.1);
@@ -696,7 +854,10 @@
 
             .services-grid,
             .philosophy-grid,
-            .blog-grid {
+            .blog-grid,
+            .credentials-grid,
+            .why-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -893,6 +1054,89 @@
     <section class="safe-environment">
         <h2>Creating a Safe & Engaging Environment</h2>
         <p>I believe that children learn best when they feel safe, understood, and engaged. My therapy space is designed to be welcoming and stimulating, where children can explore, learn, and grow at their own pace while building confidence and skills that will serve them throughout their lives.</p>
+    </section>
+
+    <!-- Professional Credentials -->
+    <section class="credentials">
+        <h2 class="section-title">Professional <span class="highlight">Credentials</span></h2>
+        <p class="section-subtitle">Maintaining the highest standards of professional practice and ethical care for your child's wellbeing and development.</p>
+        <div class="credentials-grid">
+            <div class="credential-card">
+                <span class="credential-icon">🏅</span>
+                <h3>RCI Registration</h3>
+                <p class="subtitle">Certified by the Rehabilitation Council of India</p>
+                <p>Ensuring highest standards of professional practice and adherence to national guidelines for therapeutic interventions.</p>
+            </div>
+            <div class="credential-card">
+                <span class="credential-icon">🛡️</span>
+                <h3>Ethical Practice</h3>
+                <p class="subtitle">Child protection and safety compliance</p>
+                <p>Committed to maintaining professional boundaries and creating a safe, nurturing environment for every child.</p>
+            </div>
+            <div class="credential-card">
+                <span class="credential-icon">📚</span>
+                <h3>Continuous Learning</h3>
+                <p class="subtitle">Regular professional development</p>
+                <p>Staying updated with latest therapeutic approaches and research to provide the most effective interventions.</p>
+            </div>
+            <div class="credential-card">
+                <span class="credential-icon">✅</span>
+                <h3>Quality Assurance</h3>
+                <p class="subtitle">Evidence-based practice standards</p>
+                <p>Measurable outcomes and progress tracking to ensure your child receives the best possible care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <h2 class="section-title">Why Parents <span class="highlight">Choose Me</span></h2>
+        <p class="section-subtitle">Dedicated to providing exceptional care that makes a real difference in your child's development and your family's journey.</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="why-icon">❤️</span>
+                <h3>Personalized Care Plans</h3>
+                <p>Every child receives a customized therapy plan designed specifically for their unique needs and goals.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🎯</span>
+                <h3>Holistic Development Focus</h3>
+                <p>Addressing all aspects of your child's development - physical, cognitive, emotional, and social.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">👨‍👩‍👧</span>
+                <h3>Family-Centered Support</h3>
+                <p>Working closely with parents and caregivers to ensure consistent support at home.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">📍</span>
+                <h3>Trusted by Families</h3>
+                <p>500+ families across Visakhapatnam trust me with their children's developmental journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">What Parents <span class="highlight">Say</span></h2>
+        <p class="section-subtitle">Real experiences from families who have seen remarkable progress in their children's development.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Sharmili's patience and expertise helped my son overcome his speech delays. The progress has been remarkable!</p>
+                <p class="testimonial-author">Priya M.</p>
+                <p class="testimonial-role">Mother of 4-year-old</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">The play-based approach made therapy fun for our daughter. She actually looks forward to her sessions now.</p>
+                <p class="testimonial-author">Rajesh K.</p>
+                <p class="testimonial-role">Father of 6-year-old</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Professional, caring, and incredibly knowledgeable. Sharmili has been a blessing for our family.</p>
+                <p class="testimonial-author">Anita S.</p>
+                <p class="testimonial-role">Mother of 5-year-old</p>
+            </div>
+        </div>
     </section>
 
     <!-- Blog -->
