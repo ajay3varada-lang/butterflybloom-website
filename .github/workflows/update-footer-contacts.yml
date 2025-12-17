@@ -1,0 +1,47 @@
+name: Update Footer and Contact Details
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-contacts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Update all contact details
+        run: |
+          # Update Instagram handle
+          sed -i 's|https://www.instagram.com/butterflybloom.cdc|https://www.instagram.com/butterflybloom_cdc|g' index.html
+          sed -i 's|@butterflybloom.cdc|@butterflybloom_cdc|g' index.html
+          
+          # Update phone numbers
+          sed -i 's/+919876543210/+918019589810/g' index.html
+          sed -i 's/+91 98765 43210/+91 80195 89810/g' index.html
+          
+          # Update email
+          sed -i 's/info@butterflybloomcdc.com/hello@butterflybloomcdc.com/g' index.html
+          
+          # Update location
+          sed -i 's|<p>Visakhapatnam<br>Andhra Pradesh, India</p>|<p>2nd Floor, Door No: 1, 53-8/2<br>Sector 1, MVP Colony<br>Visakhapatnam, AP 530017</p>|g' index.html
+          
+          # Update hours
+          sed -i 's|<p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</p>|<p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: By Appointment<br><strong>📅 On Appointment Basis Only</strong><br>Limited slots per week</p>|g' index.html
+          
+          # Update closing time in schema
+          sed -i 's/"closes": "18:00"/"closes": "19:00"/g' index.html
+          
+          # Update Team trained to Team served
+          sed -i 's|<p>Team trained in USA, UK, and across India</p>|<p>Team served to USA, UK, and across India</p>|g' index.html
+          
+          echo "✅ All contact details updated!"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Update all contact details and Instagram handle to @butterflybloom_cdc"
+          git push
