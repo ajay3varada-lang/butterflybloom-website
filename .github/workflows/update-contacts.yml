@@ -1,0 +1,39 @@
+name: Update Contact Details
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Update contact details
+        run: |
+          # Update phone number
+          sed -i 's/+919876543210/+918019589810/g' index.html
+          sed -i 's/+91 98765 43210/+91 80195 89810/g' index.html
+          
+          # Update email
+          sed -i 's/info@butterflybloomcdc.com/hello@butterflybloomcdc.com/g' index.html
+          
+          # Update location
+          sed -i 's|<p>Visakhapatnam<br>Andhra Pradesh, India</p>|<p>2nd Floor, Door No: 1, 53-8/2<br>Sector 1, MVP Colony<br>Visakhapatnam, AP 530017</p>|g' index.html
+          
+          # Update hours
+          sed -i 's|<p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</p>|<p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: By Appointment<br><strong>📅 Appointment Basis Only</strong><br>Limited slots per week</p>|g' index.html
+          
+          # Update closing time in schema
+          sed -i 's/"closes": "18:00"/"closes": "19:00"/g' index.html
+          
+          # Update address in schema
+          sed -i 's|"addressLocality": "Visakhapatnam",|"streetAddress": "2nd Floor, Door No: 1, 53-8/2, Sector 1, MVP Colony",\n        "addressLocality": "Visakhapatnam",\n        "postalCode": "530017",|g' index.html
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          git commit -m "Update contact details: phone, email, address, and hours" || echo "No changes to commit"
+          git push
