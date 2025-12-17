@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Butterfly Bloom Child Development Center",
+  "name_for_model": "butterfly_bloom_cdc",
+  "description_for_human": "Specialized therapy services for children with autism, ADHD, and developmental delays in Visakhapatnam",
+  "description_for_model": "Butterfly Bloom Child Development Center provides comprehensive therapy services for children with autism spectrum disorder, ADHD, developmental delays, sensory processing disorders, and communication challenges in Visakhapatnam, Andhra Pradesh, India. Services include: Occupational Therapy (OT) for fine motor skills and sensory processing, Speech Therapy for communication development, Behavioral Therapy for emotional regulation, Special Education with individualized learning, Physiotherapy for motor skills, and Parent Training & Counseling. RCI registered therapists with 500+ families served. Age range: 18 months to 14 years. Both in-person and online sessions available. Contact: +91 98765 43210, info@butterflybloomcdc.com",
+  "api": {
+    "type": "openapi",
+    "url": "https://ajay3varada-lang.github.io/butterflybloom-website/",
+    "has_user_authentication": false
+  },
+  "auth": {
+    "type": "none"
+  },
+  "logo_url": "https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-17T11-51-30-455Z-04d4bbc6-chat-image-1765972290437-0.jpg",
+  "contact_email": "info@butterflybloomcdc.com",
+  "legal_info_url": "https://ajay3varada-lang.github.io/butterflybloom-website/"
+}
