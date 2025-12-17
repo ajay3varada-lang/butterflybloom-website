@@ -47,7 +47,7 @@
       "description": "RCI Registered Child Development Center offering Speech Therapy, Occupational Therapy, ABA Therapy, and Special Education in Visakhapatnam",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "MVP Colony",
+        "streetAddress": "D.No. 50-90-11/1, Sector-1, MVP Colony",
         "addressLocality": "Visakhapatnam",
         "addressRegion": "Andhra Pradesh",
         "postalCode": "530017",
@@ -58,7 +58,7 @@
         "latitude": "17.7231",
         "longitude": "83.3012"
       },
-      "telephone": "+91-XXXXXXXXXX",
+      "telephone": "+91-8019589810",
       "email": "hello@butterflybloomcdc.com",
       "openingHoursSpecification": [
         {
@@ -308,15 +308,14 @@
         }
 
         .stat-label {
-            font-size: 1.2rem;
-            font-weight: 500;
+            font-size: 1.1rem;
             opacity: 0.95;
         }
 
         /* About Section */
         .about {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .about-content {
@@ -354,9 +353,6 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
-            background: var(--cream);
-            border-radius: 15px;
         }
 
         .feature-icon {
@@ -374,14 +370,14 @@
 
         .about-image img {
             width: 100%;
-            border-radius: 30px;
+            border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
 
         /* Services Section */
         .services {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
         .section-header {
@@ -391,7 +387,7 @@
 
         .section-header h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--primary-purple);
             margin-bottom: 1rem;
             font-weight: 800;
@@ -412,63 +408,56 @@
 
         .service-card {
             background: white;
-            border-radius: 25px;
-            overflow: hidden;
+            border-radius: 20px;
+            padding: 2.5rem;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.4s;
-            display: flex;
-            flex-direction: column;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.2);
+            border-color: var(--primary-pink);
         }
 
         .service-content {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+            text-align: center;
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
         }
 
-        .service-card h4 {
+        .service-content h4 {
             font-size: 1.5rem;
             color: var(--primary-purple);
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        .service-card p {
+        .service-content p {
             color: #666;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
         }
 
         .service-link {
             color: var(--primary-pink);
-            font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
         }
 
         .service-link:hover {
-            gap: 1rem;
+            color: var(--primary-orange);
         }
 
-        /* Testimonials */
+        /* Testimonials Section */
         .testimonials {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .testimonials-grid {
@@ -480,9 +469,9 @@
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, var(--cream) 0%, white 100%);
+            background: white;
             padding: 2.5rem;
-            border-radius: 25px;
+            border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
@@ -495,28 +484,26 @@
         .testimonial-header {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
         .testimonial-image {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--primary-pink);
         }
 
         .testimonial-info h5 {
-            font-size: 1.2rem;
             color: var(--primary-purple);
             font-weight: 700;
             margin-bottom: 0.3rem;
         }
 
         .testimonial-location {
+            font-size: 0.9rem;
             color: #666;
-            font-size: 0.95rem;
         }
 
         .stars {
@@ -534,7 +521,7 @@
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
         .contact-content {
@@ -553,42 +540,42 @@
 
         .contact-item {
             display: flex;
-            align-items: flex-start;
             gap: 1.5rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            align-items: flex-start;
         }
 
         .contact-icon {
             font-size: 2.5rem;
-            color: var(--primary-pink);
+            flex-shrink: 0;
         }
 
         .contact-details h4 {
-            font-size: 1.3rem;
             color: var(--primary-purple);
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
         .contact-details p {
             color: #666;
-            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         .contact-details a {
             color: var(--primary-pink);
             text-decoration: none;
-            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-orange);
         }
 
         .map-container {
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            height: 500px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            height: 450px;
         }
 
         .map-container iframe {
@@ -614,7 +601,7 @@
         }
 
         .footer-section h4 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
@@ -624,12 +611,27 @@
             opacity: 0.9;
         }
 
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.8rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
         .footer-links {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer-links a {
@@ -643,44 +645,15 @@
             opacity: 1;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--primary-pink);
-            transform: translateY(-3px);
-        }
-
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
             opacity: 0.8;
         }
 
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .hamburger {
-                display: flex;
-            }
-
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -698,12 +671,16 @@
                 left: 0;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
             .hero h2 {
                 font-size: 2.5rem;
             }
 
             .tagline {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
 
             .about-content,
@@ -722,27 +699,6 @@
 
             .footer-content {
                 grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                padding: 1rem 2rem;
-                font-size: 1rem;
             }
         }
     </style>
@@ -754,8 +710,8 @@
             <div class="logo">
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-15T12-14-52-399Z-9ea0c7af-nano-banana-pro_1765800892224.png" alt="Butterfly Bloom CDC Logo">
                 <div class="logo-text">
-                    <h1>Butterfly Bloom</h1>
-                    <p>Child Development Center</p>
+                    <h1>Butterfly Bloom CDC</h1>
+                    <p>RCI Registered | Visakhapatnam</p>
                 </div>
             </div>
             <ul class="nav-menu">
@@ -763,7 +719,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="cta-btn">Book Appointment</a></li>
+                <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -776,12 +732,12 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>Where Every Child <span class="highlight">Blooms</span> Beautifully</h2>
-            <p class="tagline">Nurturing Potential, Celebrating Progress in Visakhapatnam</p>
-            <p>RCI Registered Child Development Center offering Speech Therapy, Occupational Therapy, ABA Therapy, and Special Education. Empowering children with personalized care and evidence-based interventions.</p>
+            <h2>Empowering Every Child's <span class="highlight">Unique Journey</span></h2>
+            <p class="tagline">Where Potential Blooms into Progress</p>
+            <p>RCI Registered Child Development Center in Visakhapatnam offering expert Speech Therapy, Occupational Therapy, ABA Therapy, and Special Education. Trusted by 500+ families across Vizag for 8+ years.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Book Free Consultation</a>
-                <a href="#services" class="btn-secondary">Explore Services</a>
+                <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
+                <a href="#services" class="btn-secondary">Explore Our Services</a>
             </div>
         </div>
     </section>
@@ -790,24 +746,24 @@
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-icon">🎓</div>
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Years in Visakhapatnam</div>
-            </div>
-            <div class="stat-item">
                 <div class="stat-icon">👨‍👩‍👧‍👦</div>
                 <div class="stat-number">500+</div>
-                <div class="stat-label">Vizag Families Served</div>
+                <div class="stat-label">Families Served</div>
             </div>
             <div class="stat-item">
                 <div class="stat-icon">⭐</div>
-                <div class="stat-number">4.9</div>
-                <div class="stat-label">Parent Rating</div>
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Years of Excellence</div>
             </div>
             <div class="stat-item">
-                <div class="stat-icon">✅</div>
+                <div class="stat-icon">🎓</div>
                 <div class="stat-number">RCI</div>
-                <div class="stat-label">Registered Center</div>
+                <div class="stat-label">Registered Therapists</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">💝</div>
+                <div class="stat-number">4.9/5</div>
+                <div class="stat-label">Parent Satisfaction</div>
             </div>
         </div>
     </section>
@@ -816,30 +772,30 @@
     <section class="about" id="about">
         <div class="about-content">
             <div class="about-text">
-                <h3>About Butterfly Bloom CDC</h3>
-                <p>At Butterfly Bloom Child Development Center in Visakhapatnam, we believe every child deserves the opportunity to reach their full potential. Our RCI-registered center provides comprehensive developmental support through evidence-based therapies and personalized care.</p>
-                <p>With over 8 years of experience serving families in Vizag, our team of certified therapists specializes in Speech Therapy, Occupational Therapy, ABA Therapy, and Special Education. We create individualized treatment plans that celebrate each child's unique strengths and address their specific needs.</p>
+                <h3>Leading Child Development Center in Visakhapatnam</h3>
+                <p>At Butterfly Bloom CDC, we believe every child deserves the opportunity to reach their full potential. Located in the heart of MVP Colony, Visakhapatnam, we provide comprehensive, evidence-based therapeutic services tailored to each child's unique needs.</p>
+                <p>Our team of RCI registered therapists brings together expertise in speech therapy, occupational therapy, ABA therapy, and special education to create individualized treatment plans that deliver real, measurable results.</p>
                 <div class="about-features">
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">RCI Registered</div>
+                        <div class="feature-text">RCI Registered Professionals</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Certified Therapists</div>
+                        <div class="feature-text">Evidence-Based Therapies</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Evidence-Based</div>
+                        <div class="feature-text">Individualized Treatment Plans</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Family-Centered</div>
+                        <div class="feature-text">Family-Centered Approach</div>
                     </div>
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800" alt="Child Development Center Visakhapatnam">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800" alt="Child therapy session at Butterfly Bloom CDC Visakhapatnam">
             </div>
         </div>
     </section>
@@ -848,14 +804,14 @@
     <section class="services" id="services">
         <div class="section-header">
             <h3>Services We Offer</h3>
-            <p>Comprehensive developmental support tailored to your child's unique needs</p>
+            <p>Comprehensive therapeutic services for children with developmental needs</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-content">
                     <div class="service-icon">🗣️</div>
                     <h4>Speech Therapy</h4>
-                    <p>Expert speech and language intervention for articulation, fluency, voice disorders, and communication delays. Our certified speech therapists use play-based and evidence-based techniques.</p>
+                    <p>Expert treatment for speech delays, articulation disorders, language development, stuttering, and communication challenges. Our RCI registered speech therapists use play-based and evidence-based approaches.</p>
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
             </div>
@@ -864,7 +820,7 @@
                 <div class="service-content">
                     <div class="service-icon">🎨</div>
                     <h4>Occupational Therapy</h4>
-                    <p>Comprehensive OT services focusing on fine motor skills, sensory integration, self-care activities, and daily living skills to enhance independence and confidence.</p>
+                    <p>Comprehensive OT services for fine motor skills, sensory integration, self-care activities, handwriting, and daily living skills. Specialized sensory gym and equipment available.</p>
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
             </div>
@@ -873,7 +829,7 @@
                 <div class="service-content">
                     <div class="service-icon">🧩</div>
                     <h4>ABA Therapy</h4>
-                    <p>Applied Behavior Analysis therapy for children with autism and developmental delays. Structured programs to improve social skills, communication, and adaptive behaviors.</p>
+                    <p>Applied Behavior Analysis for children with autism spectrum disorder. Structured programs focusing on communication, social skills, adaptive behaviors, and reducing challenging behaviors.</p>
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
             </div>
@@ -882,16 +838,7 @@
                 <div class="service-content">
                     <div class="service-icon">📚</div>
                     <h4>Special Education</h4>
-                    <p>Individualized educational support for children with learning disabilities, ADHD, and developmental delays. Customized curriculum and teaching strategies.</p>
-                    <a href="#contact" class="service-link">Learn More →</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon">🌈</div>
-                    <h4>Sensory Integration</h4>
-                    <p>Specialized therapy for sensory processing disorders. Helps children regulate responses to sensory input and improve attention, behavior, and motor skills.</p>
+                    <p>Customized learning programs for children with learning disabilities, intellectual disabilities, and developmental delays. Focus on academic skills, cognitive development, and school readiness.</p>
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
             </div>
@@ -1045,7 +992,7 @@
                     <div class="contact-icon">📍</div>
                     <div class="contact-details">
                         <h4>Location</h4>
-                        <p>MVP Colony, Sector 1<br>Visakhapatnam, Andhra Pradesh 530017</p>
+                        <p>D.No. 50-90-11/1, Sector-1, MVP Colony<br>Visakhapatnam, Andhra Pradesh 530017</p>
                     </div>
                 </div>
 
@@ -1053,7 +1000,7 @@
                     <div class="contact-icon">📞</div>
                     <div class="contact-details">
                         <h4>Phone</h4>
-                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                        <p><a href="tel:+918019589810">+91 80195 89810</a></p>
                     </div>
                 </div>
 
@@ -1119,8 +1066,8 @@
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <ul class="footer-links">
-                    <li>📍 MVP Colony, Visakhapatnam</li>
-                    <li>📞 +91 98765 43210</li>
+                    <li>📍 D.No. 50-90-11/1, MVP Colony, Visakhapatnam</li>
+                    <li>📞 +91 80195 89810</li>
                     <li>✉️ hello@butterflybloomcdc.com</li>
                     <li>🕐 Mon-Sat: 9 AM - 7 PM</li>
                     <li>🕐 Sunday: By Appointment</li>
