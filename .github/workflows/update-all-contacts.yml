@@ -1,0 +1,26 @@
+name: Update All Contact Details
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-contacts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Make script executable
+        run: chmod +x update-contacts.sh
+      
+      - name: Run update script
+        run: ./update-contacts.sh
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.html
+          git diff --staged --quiet || git commit -m "✅ Update all contact details: Instagram (@butterflybloom_cdc/), phone (+91-8019589810), email (hello@), address, hours"
+          git push
