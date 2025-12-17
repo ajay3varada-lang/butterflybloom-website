@@ -248,9 +248,8 @@
             color: white;
             padding: 1.2rem 3rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
             display: inline-block;
         }
@@ -265,9 +264,8 @@
             color: var(--primary-purple);
             padding: 1.2rem 3rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            text-decoration: none;
             border: 2px solid var(--primary-purple);
             transition: all 0.3s;
             display: inline-block;
@@ -276,40 +274,34 @@
         .btn-secondary:hover {
             background: var(--primary-purple);
             color: white;
-            transform: translateY(-3px);
         }
 
-        /* Trust Badges */
-        .trust-badges {
-            background: white;
+        /* Stats */
+        .stats {
+            background: var(--primary-purple);
+            color: white;
             padding: 3rem 2rem;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
             text-align: center;
         }
 
-        .badges-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .badge {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .badge h3 {
-            font-size: 2.5rem;
-            color: var(--primary-pink);
+        .stat-item h3 {
+            font-size: 3rem;
             font-weight: 800;
+            color: var(--primary-orange);
             margin-bottom: 0.5rem;
         }
 
-        .badge p {
-            color: #666;
-            font-size: 1rem;
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.95;
         }
 
         /* Services */
@@ -327,8 +319,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
             color: var(--primary-purple);
-            margin-bottom: 1rem;
-            font-weight: 800;
+            margin-bottom: 0.5rem;
         }
 
         .section-title p {
@@ -355,7 +346,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(233, 30, 99, 0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
         .service-icon {
@@ -367,7 +358,6 @@
             font-size: 1.5rem;
             color: var(--primary-purple);
             margin-bottom: 1rem;
-            font-weight: 700;
         }
 
         .service-card p {
@@ -379,15 +369,15 @@
         .service-card ul {
             text-align: left;
             list-style: none;
-            margin-bottom: 1.5rem;
+            padding: 0;
         }
 
-        .service-card ul li {
+        .service-card li {
             padding: 0.5rem 0;
             color: #555;
         }
 
-        .service-card ul li:before {
+        .service-card li:before {
             content: "✓ ";
             color: var(--primary-pink);
             font-weight: bold;
@@ -404,28 +394,35 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
         .feature-card {
-            text-align: center;
+            display: flex;
+            gap: 1.5rem;
             padding: 2rem;
+            background: var(--cream);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateX(10px);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            flex-shrink: 0;
         }
 
-        .feature-card h3 {
-            font-size: 1.3rem;
+        .feature-content h3 {
             color: var(--primary-purple);
-            margin-bottom: 0.8rem;
-            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
         }
 
-        .feature-card p {
+        .feature-content p {
             color: #666;
             line-height: 1.7;
         }
@@ -433,7 +430,13 @@
         /* Testimonials */
         .testimonials {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--cream) 0%, #FFF 100%);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, #7B3FA8 100%);
+            color: white;
+        }
+
+        .testimonials .section-title h2,
+        .testimonials .section-title p {
+            color: white;
         }
 
         .testimonials-grid {
@@ -445,50 +448,40 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
-            position: relative;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .testimonial-card:before {
-            content: '"';
-            font-size: 5rem;
-            color: var(--primary-pink);
-            opacity: 0.2;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-family: 'Playfair Display', serif;
+        .stars {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .testimonial-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
             line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--primary-purple);
+            font-size: 1.1rem;
         }
 
         .testimonial-role {
-            font-size: 0.9rem;
-            color: #999;
+            opacity: 0.8;
+            font-size: 0.95rem;
         }
 
-        .stars {
-            color: #FFD700;
-            margin-bottom: 1rem;
-        }
-
-        /* Blog Section */
+        /* Blog */
         .blog {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .blog-grid {
@@ -509,7 +502,7 @@
 
         .blog-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(233, 30, 99, 0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
         .blog-image {
@@ -524,21 +517,20 @@
 
         .blog-meta {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
             margin-bottom: 1rem;
-            font-size: 0.85rem;
-            color: #999;
         }
 
-        .blog-card h3 {
-            font-size: 1.4rem;
+        .blog-content h3 {
             color: var(--primary-purple);
+            font-size: 1.3rem;
             margin-bottom: 1rem;
-            font-weight: 700;
             line-height: 1.4;
         }
 
-        .blog-card p {
+        .blog-content p {
             color: #666;
             line-height: 1.7;
             margin-bottom: 1.5rem;
@@ -546,22 +538,19 @@
 
         .read-more {
             color: var(--primary-pink);
-            text-decoration: none;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
         .read-more:hover {
-            gap: 1rem;
+            color: var(--primary-orange);
         }
 
-        /* FAQ Section */
+        /* FAQ */
         .faq {
             padding: 5rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
         .faq-container {
@@ -570,11 +559,11 @@
         }
 
         .faq-item {
-            background: white;
+            background: var(--cream);
             margin-bottom: 1.5rem;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
         }
 
         .faq-question {
@@ -590,13 +579,18 @@
         }
 
         .faq-question:hover {
-            background: var(--cream);
+            background: rgba(255,140,66,0.1);
         }
 
         .faq-toggle {
             font-size: 1.5rem;
+            font-weight: bold;
             color: var(--primary-pink);
             transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
         }
 
         .faq-answer {
@@ -606,9 +600,9 @@
             padding: 0 2rem;
         }
 
-        .faq-answer.active {
-            max-height: 1000px;
-            padding: 0 2rem 1.8rem 2rem;
+        .faq-item.active .faq-answer {
+            max-height: 2000px;
+            padding: 0 2rem 2rem 2rem;
         }
 
         .faq-answer p {
@@ -618,65 +612,58 @@
         }
 
         .faq-answer ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+            margin: 1rem 0 1rem 1.5rem;
+            color: #555;
         }
 
         .faq-answer li {
-            color: #555;
-            line-height: 1.8;
             margin-bottom: 0.5rem;
+            line-height: 1.7;
         }
 
         .highlight-box {
-            background: #FFF8F0;
-            border-left: 4px solid var(--primary-pink);
+            background: rgba(255,140,66,0.1);
+            border-left: 4px solid var(--primary-orange);
             padding: 1rem 1.5rem;
             margin: 1rem 0;
             border-radius: 8px;
         }
 
-        .highlight-box strong {
-            color: var(--primary-purple);
-        }
-
         /* Contact */
         .contact {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
 
         .contact-info h3 {
-            font-size: 1.8rem;
             color: var(--primary-purple);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
         }
 
         .contact-item {
             display: flex;
-            align-items: start;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-bottom: 2rem;
+            align-items: flex-start;
         }
 
         .contact-icon {
-            font-size: 1.8rem;
-            color: var(--primary-pink);
+            font-size: 2rem;
+            flex-shrink: 0;
         }
 
         .contact-item h4 {
             color: var(--primary-purple);
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
         .contact-item p {
@@ -687,75 +674,23 @@
         .contact-item a {
             color: var(--primary-pink);
             text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .contact-form {
-            background: var(--cream);
-            padding: 3rem;
+        .contact-item a:hover {
+            color: var(--primary-orange);
+        }
+
+        .map-container {
             border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            height: 400px;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary-purple);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .map-container iframe {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #E0E0E0;
-            border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-pink);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
-            color: white;
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
-        }
-
-        /* Map */
-        .map-section {
-            padding: 0;
-        }
-
-        .map-section iframe {
-            width: 100%;
-            height: 450px;
+            height: 100%;
             border: none;
         }
 
@@ -776,16 +711,19 @@
         }
 
         .footer-section h3 {
+            color: var(--primary-orange);
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
         }
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
             text-decoration: none;
-            line-height: 2;
             display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
@@ -799,6 +737,7 @@
         }
 
         .social-links a {
+            display: inline-block;
             width: 40px;
             height: 40px;
             background: rgba(255,255,255,0.1);
@@ -806,6 +745,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.2rem;
             transition: background 0.3s;
         }
 
@@ -817,7 +757,7 @@
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.8);
         }
 
         /* Responsive */
@@ -843,18 +783,6 @@
                 left: 0;
             }
 
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-
-            .tagline {
-                font-size: 1.3rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
             .logo img {
                 height: 55px;
                 width: 55px;
@@ -866,6 +794,33 @@
 
             .logo-text p {
                 font-size: 0.75rem;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .features-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -883,11 +838,11 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#why-choose">Why Us</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="cta-btn">Book Free Consultation</a></li>
+                <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -901,33 +856,33 @@
     <section class="hero">
         <div class="hero-content">
             <h2>Empowering Every Child to <span class="highlight">Bloom</span></h2>
-            <p class="tagline">🦋 Where Growth Meets Care 🦋</p>
-            <p>RCI Registered Child Development Center in Visakhapatnam offering Speech Therapy, Occupational Therapy, ABA Therapy & Special Education. Trusted by 500+ families across Vizag.</p>
+            <p class="tagline">Where Growth Meets Care 🦋</p>
+            <p>RCI Registered Speech Therapy, Occupational Therapy, ABA Therapy & Special Education in Visakhapatnam MVP Colony. Expert therapists with 8+ years experience helping 500+ families.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">📞 Book Free Consultation</a>
-                <a href="https://wa.me/918019589810" class="btn-secondary">💬 WhatsApp Us</a>
+                <a href="tel:+918019589810" class="btn-primary">📞 Call +91 80195 89810</a>
+                <a href="#services" class="btn-secondary">Explore Services</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="trust-badges">
-        <div class="badges-container">
-            <div class="badge">
-                <h3>8+</h3>
-                <p>Years Experience</p>
-            </div>
-            <div class="badge">
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
                 <h3>500+</h3>
                 <p>Families Served</p>
             </div>
-            <div class="badge">
+            <div class="stat-item">
+                <h3>8+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p>Success Rate</p>
+            </div>
+            <div class="stat-item">
                 <h3>RCI</h3>
                 <p>Registered Therapists</p>
-            </div>
-            <div class="badge">
-                <h3>4.9★</h3>
-                <p>Parent Rating</p>
             </div>
         </div>
     </section>
@@ -936,17 +891,18 @@
     <section id="services" class="services">
         <div class="section-title">
             <h2>Our Specialized Services</h2>
-            <p>Comprehensive therapy programs tailored for your child's unique needs</p>
+            <p>Comprehensive therapy solutions for your child's development</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🗣️</div>
                 <h3>Speech Therapy</h3>
-                <p>Expert speech and language intervention for communication development</p>
+                <p>Expert speech-language pathology services for communication development</p>
                 <ul>
                     <li>Articulation & Phonology</li>
                     <li>Language Development</li>
-                    <li>Fluency & Voice Therapy</li>
+                    <li>Stuttering Treatment</li>
+                    <li>Voice Therapy</li>
                     <li>Feeding & Swallowing</li>
                 </ul>
             </div>
@@ -954,77 +910,97 @@
             <div class="service-card">
                 <div class="service-icon">🎯</div>
                 <h3>Occupational Therapy</h3>
-                <p>Enhancing daily living skills and sensory integration</p>
+                <p>Helping children develop essential life skills and independence</p>
                 <ul>
-                    <li>Fine & Gross Motor Skills</li>
+                    <li>Fine Motor Skills</li>
                     <li>Sensory Integration</li>
-                    <li>Self-Care Skills</li>
-                    <li>Handwriting & Coordination</li>
+                    <li>Handwriting Skills</li>
+                    <li>Self-Care Activities</li>
+                    <li>Visual-Motor Coordination</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">🧩</div>
                 <h3>ABA Therapy</h3>
-                <p>Evidence-based behavioral intervention for autism spectrum</p>
+                <p>Evidence-based behavioral therapy for autism and developmental delays</p>
                 <ul>
                     <li>Behavior Management</li>
                     <li>Social Skills Training</li>
                     <li>Communication Skills</li>
                     <li>Daily Living Skills</li>
+                    <li>Parent Training</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">📚</div>
                 <h3>Special Education</h3>
-                <p>Individualized learning programs for academic success</p>
+                <p>Individualized learning programs for children with special needs</p>
                 <ul>
-                    <li>Customized Curriculum</li>
-                    <li>Learning Disability Support</li>
-                    <li>Academic Skills Development</li>
-                    <li>School Readiness Programs</li>
+                    <li>Academic Support</li>
+                    <li>Learning Disabilities</li>
+                    <li>School Readiness</li>
+                    <li>Cognitive Development</li>
+                    <li>IEP Development</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section id="why-us" class="why-choose">
+    <section id="why-choose" class="why-choose">
         <div class="section-title">
-            <h2>Why Parents Choose Butterfly Bloom</h2>
-            <p>What makes us Visakhapatnam's most trusted child development center</p>
+            <h2>Why Choose Butterfly Bloom CDC?</h2>
+            <p>What makes us Visakhapatnam's trusted child development center</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">👨‍⚕️</div>
-                <h3>RCI Certified Experts</h3>
-                <p>All therapists are RCI registered with 8+ years of specialized experience</p>
+                <div class="feature-icon">✅</div>
+                <div class="feature-content">
+                    <h3>RCI Registered Therapists</h3>
+                    <p>All our therapists are certified by the Rehabilitation Council of India with advanced degrees and continuous training.</p>
+                </div>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">🎯</div>
-                <h3>Personalized Programs</h3>
-                <p>Customized therapy plans based on comprehensive assessments</p>
+                <div class="feature-content">
+                    <h3>Personalized Treatment Plans</h3>
+                    <p>Every child receives a customized therapy program based on comprehensive assessment and individual goals.</p>
+                </div>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">🏠</div>
-                <h3>Home & Online Sessions</h3>
-                <p>Flexible therapy options - center-based, home visits, or online</p>
+                <div class="feature-content">
+                    <h3>Parent Training & Support</h3>
+                    <p>We empower parents with techniques and strategies to support their child's development at home.</p>
+                </div>
             </div>
+
             <div class="feature-card">
-                <div class="feature-icon">👨‍👩‍👧</div>
-                <h3>Parent Training</h3>
-                <p>Comprehensive guidance and training for parents and caregivers</p>
+                <div class="feature-icon">💻</div>
+                <div class="feature-content">
+                    <h3>Online & In-Person Options</h3>
+                    <p>Flexible therapy delivery with both online and in-person sessions to suit your family's needs.</p>
+                </div>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">📊</div>
-                <h3>Progress Tracking</h3>
-                <p>Regular assessments and detailed progress reports</p>
+                <div class="feature-content">
+                    <h3>Progress Tracking</h3>
+                    <p>Regular assessments and detailed progress reports every 3 months to monitor your child's development.</p>
+                </div>
             </div>
+
             <div class="feature-card">
-                <div class="feature-icon">💰</div>
-                <h3>Affordable Packages</h3>
-                <p>Transparent pricing with flexible payment options</p>
+                <div class="feature-icon">🏆</div>
+                <div class="feature-content">
+                    <h3>Proven Results</h3>
+                    <p>8+ years of experience with 500+ families and a 95% success rate in achieving therapy goals.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1033,19 +1009,19 @@
     <section id="testimonials" class="testimonials">
         <div class="section-title">
             <h2>What Parents Say</h2>
-            <p>Real stories from families we've helped</p>
+            <p>Real stories from families we've helped in Visakhapatnam</p>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"My son's speech has improved dramatically in just 6 months. The therapists are patient, professional, and truly care about each child's progress. Best decision we made!"</p>
+                <p class="testimonial-text">"My son's speech has improved dramatically in just 6 months! The therapists at Butterfly Bloom are patient, professional, and truly care about each child's progress."</p>
                 <p class="testimonial-author">Priya Sharma</p>
                 <p class="testimonial-role">Parent of 4-year-old</p>
             </div>
 
             <div class="testimonial-card">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"The occupational therapy sessions have been life-changing for our daughter. She's now more confident, independent, and her sensory issues have reduced significantly."</p>
+                <p class="testimonial-text">"Best occupational therapy center in Vizag! My daughter's sensory issues have reduced significantly. The team is knowledgeable and supportive."</p>
                 <p class="testimonial-author">Rajesh Kumar</p>
                 <p class="testimonial-role">Parent of 6-year-old</p>
             </div>
@@ -1244,57 +1220,27 @@
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Are your therapists qualified and registered?</span>
+                    <span>Are your therapists qualified and certified?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p><strong>Yes! All our therapists are highly qualified professionals.</strong></p>
-                    <div class="highlight-box">
-                        <strong>✅ RCI Registered:</strong> Rehabilitation Council of India certification<br>
-                        <strong>✅ Advanced Degrees:</strong> Master's in Speech-Language Pathology, Occupational Therapy, Special Education<br>
-                        <strong>✅ 8+ Years Experience:</strong> Extensive clinical experience with diverse cases<br>
-                        <strong>✅ Continuous Training:</strong> Regular workshops and certification updates
-                    </div>
-                    <p><strong>Our team includes:</strong></p>
-                    <ul>
-                        <li>RCI-registered Speech-Language Pathologists</li>
-                        <li>Licensed Occupational Therapists</li>
-                        <li>Board Certified Behavior Analysts (BCBA)</li>
-                        <li>Special Educators with B.Ed/M.Ed degrees</li>
-                    </ul>
-                    <p>We maintain the highest professional standards and follow evidence-based practices in all our therapy programs.</p>
+                    <p>We're really proud of our team! Every therapist at Butterfly Bloom is <strong>RCI registered</strong> and brings a wealth of real-world experience.</p>
+                    <p>What makes our team special is the diverse journey they've had—working with children and families across <strong>Visakhapatnam, Hyderabad, Chennai, Kerala, and even internationally in the USA and UK</strong>. This exposure means they understand different approaches and have seen a wide variety of cases.</p>
+                    <p>Over the years, we've had the privilege of supporting <strong>over 500 families in and around Visakhapatnam</strong>, and that experience has taught us so much about what truly works for each unique child.</p>
+                    <p>🦋 <strong>Our therapists don't just have certifications—they have stories, insights, and a genuine passion for helping your child thrive.</strong></p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What are your fees and do you accept insurance?</span>
+                    <span>How much does therapy cost and do you accept insurance?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p><strong>Transparent Pricing with Flexible Options:</strong></p>
-                    <p><strong>Individual Session Rates:</strong></p>
-                    <ul>
-                        <li>Speech Therapy: ₹800-1200 per session</li>
-                        <li>Occupational Therapy: ₹800-1200 per session</li>
-                        <li>ABA Therapy: ₹1000-1500 per session</li>
-                        <li>Special Education: ₹700-1000 per session</li>
-                    </ul>
-                    <p><strong>Package Discounts Available:</strong></p>
-                    <ul>
-                        <li>Monthly packages (8-12 sessions): 10% discount</li>
-                        <li>Quarterly packages (24-36 sessions): 15% discount</li>
-                        <li>Combination therapy packages: Special rates</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <strong>Insurance:</strong> We provide detailed invoices and reports that you can submit to your insurance company for reimbursement. Many parents successfully claim under health insurance policies.
-                    </div>
-                    <p><strong>Free Services:</strong></p>
-                    <ul>
-                        <li>Initial consultation (30 minutes)</li>
-                        <li>Progress reports every 3 months</li>
-                        <li>Parent counseling sessions</li>
-                    </ul>
+                    <p>Therapy investment really depends on what your child needs—every journey is different.</p>
+                    <p>We work with families to create <strong>personalized therapy plans</strong> that consider the type of therapy, session frequency, and your family's goals. Some families prefer <strong>in-person sessions at our center</strong>, while others find <strong>online therapy</strong> works better for their schedule—though online sessions often involve more time since we're training both you and your child together, which adds incredible value.</p>
+                    <p>We also offer <strong>monthly packages</strong> that many families find more manageable, and we provide <strong>detailed invoices and clinical reports</strong> that you can submit to your insurance provider if you'd like to explore reimbursement options.</p>
+                    <p>💬 <strong>The best way forward?</strong> Let's have a conversation! We'll understand your child's needs, discuss what therapy approach would work best, and find a plan that fits your family—both therapeutically and financially.</p>
                 </div>
             </div>
 
@@ -1422,7 +1368,7 @@
     <section id="contact" class="contact">
         <div class="section-title">
             <h2>Get in Touch</h2>
-            <p>Book your free consultation today</p>
+            <p>Book your consultation today</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
@@ -1459,70 +1405,12 @@
                         <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By Appointment</p>
                     </div>
                 </div>
-
-                <div class="social-links">
-                    <a href="https://wa.me/918019589810" target="_blank" title="WhatsApp">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/butterflybloomcdc" target="_blank" title="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    <a href="https://facebook.com/butterflybloomcdc" target="_blank" title="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                </div>
             </div>
 
-            <div class="contact-form">
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <label for="name">Parent Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Service Interested In *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service</option>
-                            <option value="speech">Speech Therapy</option>
-                            <option value="occupational">Occupational Therapy</option>
-                            <option value="aba">ABA Therapy</option>
-                            <option value="special-ed">Special Education</option>
-                            <option value="assessment">Assessment Only</option>
-                            <option value="consultation">Free Consultation</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Tell us about your child's needs</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Book Free Consultation</button>
-                </form>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.2!2d83.3012!3d17.7231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQzJzIzLjIiTiA4M8KwMTgnMDQuMyJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.2!2d83.3012!3d17.7231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQzJzIzLjIiTiA4M8KwMTgnMDQuMyJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Footer -->
@@ -1530,18 +1418,22 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Butterfly Bloom CDC</h3>
-                <p>Empowering every child to reach their full potential through specialized therapy and care.</p>
-                <p style="margin-top: 1rem;">🦋 Where Growth Meets Care 🦋</p>
+                <p>Empowering every child to bloom with expert therapy services in Visakhapatnam.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">📹</a>
+                    <a href="#" aria-label="WhatsApp">💬</a>
+                </div>
             </div>
 
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <a href="#services">Our Services</a>
-                <a href="#why-us">Why Choose Us</a>
+                <a href="#why-choose">Why Choose Us</a>
                 <a href="#testimonials">Testimonials</a>
-                <a href="#blog">Blog & Resources</a>
+                <a href="#blog">Blog</a>
                 <a href="#faq">FAQ</a>
-                <a href="#contact">Contact Us</a>
             </div>
 
             <div class="footer-section">
@@ -1550,7 +1442,6 @@
                 <a href="#services">Occupational Therapy</a>
                 <a href="#services">ABA Therapy</a>
                 <a href="#services">Special Education</a>
-                <a href="#contact">Free Consultation</a>
             </div>
 
             <div class="footer-section">
@@ -1558,41 +1449,37 @@
                 <p>📍 MVP Colony, Visakhapatnam</p>
                 <p>📞 <a href="tel:+918019589810">+91 80195 89810</a></p>
                 <p>✉️ <a href="mailto:hello@butterflybloomcdc.com">hello@butterflybloomcdc.com</a></p>
-                <p>🕐 Mon-Sat: 9 AM - 7 PM</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2024 Butterfly Bloom Child Development Center. All rights reserved. | RCI Registered | Visakhapatnam, Andhra Pradesh</p>
+            <p>&copy; 2024 Butterfly Bloom Child Development Center. All rights reserved. | Visakhapatnam, Andhra Pradesh</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile menu toggle
         function toggleMenu() {
             const navMenu = document.querySelector('.nav-menu');
             navMenu.classList.toggle('active');
         }
 
-        // FAQ Toggle
+        // FAQ toggle
         function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
             
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer').forEach(item => {
-                if (item !== answer) {
-                    item.classList.remove('active');
-                    item.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
-                }
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
             });
             
-            // Toggle current FAQ
-            answer.classList.toggle('active');
-            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
         }
 
-        // Smooth Scrolling
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1606,12 +1493,6 @@
                     document.querySelector('.nav-menu').classList.remove('active');
                 }
             });
-        });
-
-        // Form Submission (you'll need to set up Formspree or similar)
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-            // Form will submit to Formspree - replace YOUR_FORM_ID with actual ID
-            alert('Thank you! We will contact you within 24 hours.');
         });
     </script>
 </body>
