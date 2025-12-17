@@ -40,6 +40,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-17T11-51-30-455Z-04d4bbc6-chat-image-1765972290437-0.jpg">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Schema.org Markup for Local Business -->
     <script type="application/ld+json">
     {
@@ -85,68 +90,6 @@
         "Occupational Therapy",
         "Speech Therapy"
       ],
-      "availableService": [
-        {
-          "@type": "MedicalTherapy",
-          "name": "Occupational Therapy",
-          "description": "Play-based activities for fine motor skills, sensory processing, and daily living activities"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Speech Therapy",
-          "description": "Communication development including articulation, language comprehension, and social communication"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Behavioral Therapy",
-          "description": "Evidence-based strategies for positive behaviors and emotional regulation"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Special Education",
-          "description": "Customized learning programs adapted to individual learning styles"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Physiotherapy",
-          "description": "Movement-based therapy for strength, coordination, and motor skills"
-        },
-        {
-          "@type": "Service",
-          "name": "Parent Training & Counseling",
-          "description": "Practical strategies and emotional support for families"
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Therapy Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Autism Therapy",
-              "description": "Comprehensive therapy for children with Autism Spectrum Disorder"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "ADHD Treatment",
-              "description": "Behavioral and therapeutic interventions for ADHD"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Developmental Delay Therapy",
-              "description": "Early intervention for developmental delays"
-            }
-          }
-        ]
-      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -185,36 +128,7 @@
             "@type": "Answer",
             "text": "Yes! We provide both in-person and online therapy sessions. Online sessions work particularly well for parent training, speech therapy, and behavioral consultations, making quality care accessible no matter where you are."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "What conditions do you treat?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We specialize in treating children with Autism Spectrum Disorder (ASD), ADHD, developmental delays, sensory processing disorder, speech delays, language disorders, learning disabilities, motor skill delays, behavioral challenges, and communication disorders."
-          }
         }
-      ]
-    }
-    </script>
-    
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Butterfly Bloom Child Development Center",
-      "url": "https://ajay3varada-lang.github.io/butterflybloom-website/",
-      "logo": "https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-17T11-51-30-455Z-04d4bbc6-chat-image-1765972290437-0.jpg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+919876543210",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Telugu", "Hindi"]
-      },
-      "sameAs": [
-        "https://ajay3varada-lang.github.io/butterflybloom-website/"
       ]
     }
     </script>
@@ -226,24 +140,52 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+        :root {
+            --primary-purple: #8e44ad;
+            --primary-orange: #e67e22;
+            --primary-pink: #e91e63;
+            --light-purple: #9b59b6;
+            --light-orange: #f39c12;
+            --cream: #fef5e7;
+            --light-cream: #fdebd0;
+            --white: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #555;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-hover: rgba(0, 0, 0, 0.15);
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 100%);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
         .header {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px var(--shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 6px 30px var(--shadow-hover);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -255,234 +197,766 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section:hover {
+            transform: scale(1.05);
         }
 
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(142, 68, 173, 0.2));
+            transition: all 0.3s ease;
+        }
+
+        .logo-section:hover .logo {
+            filter: drop-shadow(0 6px 12px rgba(142, 68, 173, 0.4));
         }
 
         .logo-text h1 {
-            font-size: 1.5rem;
-            color: #8e44ad;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 0.2rem;
         }
 
         .logo-text p {
             font-size: 0.9rem;
-            color: #e67e22;
+            color: var(--primary-orange);
+            font-weight: 500;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
-            color: #8e44ad;
+            color: var(--text-dark);
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--primary-orange));
+            transition: width 0.3s ease;
+            border-radius: 2px;
         }
 
         nav a:hover {
-            color: #e67e22;
+            color: var(--primary-purple);
         }
 
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary-purple);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
-            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.05) 0%, rgba(230, 126, 34, 0.05) 100%);
+            padding: 6rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🦋';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .hero h2 {
-            font-size: 2.5rem;
-            color: #8e44ad;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #e67e22, #d35400);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-orange), #d35400);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(230, 126, 34, 0.4);
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(230, 126, 34, 0.5);
         }
 
-        .container {
+        .cta-button-secondary {
+            background: white;
+            color: var(--primary-purple);
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--primary-purple);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 -5px 20px var(--shadow);
+        }
+
+        .stats-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            color: #8e44ad;
-            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
             text-align: center;
         }
 
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(230, 126, 34, 0.1));
+            color: var(--primary-purple);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--primary-orange));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px var(--shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .service-card h3 {
-            color: #e67e22;
+            color: var(--primary-purple);
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
 
         .service-card p {
-            color: #555;
+            color: var(--text-light);
             line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
 
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-orange);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
         .about-content {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px var(--shadow);
         }
 
-        .about-content p {
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.05), rgba(230, 126, 34, 0.05));
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .about-card h3 {
+            color: var(--primary-purple);
             margin-bottom: 1rem;
-            color: #555;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .about-card p {
+            color: var(--text-light);
             line-height: 1.8;
         }
 
-        .contact-info {
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .contact-item {
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: start;
-            gap: 1rem;
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-hover);
         }
 
-        .contact-item strong {
-            color: #8e44ad;
-            min-width: 100px;
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .contact-item a {
-            color: #e67e22;
-            text-decoration: none;
+        .feature-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
-        .contact-item a:hover {
-            text-decoration: underline;
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .faq-item {
             background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 30px var(--shadow-hover);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
         }
 
         .faq-item h3 {
-            color: #8e44ad;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex: 1;
         }
 
-        .faq-item p {
-            color: #555;
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary-orange);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
             line-height: 1.8;
         }
 
-        .footer {
-            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            padding: 5rem 2rem;
+            border-radius: 30px;
             color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            box-shadow: 0 10px 40px rgba(142, 68, 173, 0.3);
         }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(142, 68, 173, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(142, 68, 173, 0.5);
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-container {
-                flex-direction: column;
-                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background: white;
+                padding: 5rem 2rem 2rem;
+                box-shadow: 5px 0 20px var(--shadow);
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+
+            nav.active {
+                left: 0;
             }
 
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+                gap: 2rem;
+                align-items: flex-start;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+
+            .logo-text p {
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem;
             }
 
             .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
                 font-size: 2rem;
             }
 
-            .services-grid {
+            .services-grid,
+            .features-grid,
+            .about-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            .scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .service-card,
+            .about-content,
+            .contact-card {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="nav-container">
-            <div class="logo-section">
+            <div class="logo-section" onclick="window.location.href='#home'">
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-17T11-51-30-455Z-04d4bbc6-chat-image-1765972290437-0.jpg" alt="Butterfly Bloom Child Development Center Logo" class="logo">
                 <div class="logo-text">
                     <h1>Butterfly Bloom</h1>
                     <p>Child Development Center</p>
                 </div>
             </div>
-            <nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -493,130 +967,414 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>🦋 Where Every Child Blooms at Their Own Pace</h2>
+            <div class="hero-badge">🦋 RCI Registered • 500+ Families Served</div>
+            <h2>Where Every Child Blooms at Their Own Pace</h2>
             <p>Specialized therapy services for children with autism, ADHD, and developmental delays in Visakhapatnam</p>
-            <a href="#contact" class="cta-button">Book Your Session Today</a>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">📞 Book Your Session</a>
+                <a href="#services" class="cta-button cta-button-secondary">🔍 Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Families Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Specialized Services</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.9★</div>
+                <div class="stat-label">Parent Rating</div>
+            </div>
         </div>
     </section>
 
     <div class="container">
         <section id="services" class="section">
-            <h2>Our Therapy Services</h2>
+            <div class="section-header">
+                <div class="section-badge">OUR SERVICES</div>
+                <h2>Comprehensive Therapy Services</h2>
+                <p class="section-subtitle">Evidence-based, child-centered approaches tailored to your child's unique needs</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🎯 Occupational Therapy (OT)</h3>
-                    <p>Helping children develop essential life skills through play-based activities. We focus on fine motor skills, sensory processing, and daily living activities to build independence and confidence.</p>
+                    <span class="service-icon">🎯</span>
+                    <h3>Occupational Therapy (OT)</h3>
+                    <p>Play-based activities for fine motor skills, sensory processing, and daily living activities to build independence and confidence.</p>
+                    <ul class="service-features">
+                        <li>Fine motor skill development</li>
+                        <li>Sensory integration therapy</li>
+                        <li>Daily living skills training</li>
+                        <li>Handwriting improvement</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>💬 Speech Therapy</h3>
-                    <p>Supporting communication development through engaging, child-centered approaches. We work on articulation, language comprehension, social communication, and alternative communication methods.</p>
+                    <span class="service-icon">💬</span>
+                    <h3>Speech Therapy</h3>
+                    <p>Supporting communication development through engaging, child-centered approaches for articulation and language comprehension.</p>
+                    <ul class="service-features">
+                        <li>Articulation therapy</li>
+                        <li>Language development</li>
+                        <li>Social communication skills</li>
+                        <li>Alternative communication (AAC)</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>🧩 Behavioral Therapy</h3>
-                    <p>Evidence-based strategies to support positive behaviors and emotional regulation. We create individualized plans that help children thrive in home, school, and community settings.</p>
+                    <span class="service-icon">🧩</span>
+                    <h3>Behavioral Therapy</h3>
+                    <p>Evidence-based strategies to support positive behaviors and emotional regulation in home, school, and community settings.</p>
+                    <ul class="service-features">
+                        <li>Behavior management plans</li>
+                        <li>Emotional regulation training</li>
+                        <li>Social skills development</li>
+                        <li>Positive reinforcement strategies</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>🎨 Special Education</h3>
-                    <p>Customized learning programs that meet each child where they are. We adapt teaching methods to match individual learning styles and developmental needs.</p>
+                    <span class="service-icon">🎨</span>
+                    <h3>Special Education</h3>
+                    <p>Customized learning programs that meet each child where they are, adapted to individual learning styles and needs.</p>
+                    <ul class="service-features">
+                        <li>Individualized education plans</li>
+                        <li>Learning disability support</li>
+                        <li>Academic skill building</li>
+                        <li>Adaptive teaching methods</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>🏃 Physiotherapy</h3>
-                    <p>Building strength, coordination, and motor skills through movement-based therapy. We help children improve physical abilities and participate more fully in daily activities.</p>
+                    <span class="service-icon">🏃</span>
+                    <h3>Physiotherapy</h3>
+                    <p>Building strength, coordination, and motor skills through movement-based therapy to improve physical abilities.</p>
+                    <ul class="service-features">
+                        <li>Gross motor skill development</li>
+                        <li>Strength and coordination</li>
+                        <li>Balance and posture training</li>
+                        <li>Movement therapy</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>👨‍👩‍👧 Parent Training & Counseling</h3>
-                    <p>Empowering families with practical strategies and emotional support. We believe parents are the most important part of a child's therapy journey.</p>
+                    <span class="service-icon">👨‍👩‍👧</span>
+                    <h3>Parent Training & Counseling</h3>
+                    <p>Empowering families with practical strategies and emotional support. Parents are the most important part of therapy.</p>
+                    <ul class="service-features">
+                        <li>Home strategy implementation</li>
+                        <li>Behavioral management training</li>
+                        <li>Emotional support & guidance</li>
+                        <li>Progress monitoring tools</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="section">
+            <div class="section-header">
+                <div class="section-badge">WHY CHOOSE US</div>
+                <h2>What Makes Us Different</h2>
+                <p class="section-subtitle">Compassionate care backed by expertise and proven results</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>RCI Registered Professionals</h3>
+                    <p>All therapists registered with Rehabilitation Council of India</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>International Experience</h3>
+                    <p>Team trained in USA, UK, and across India</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Online & In-Person</h3>
+                    <p>Flexible therapy options to suit your needs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family-Centered Approach</h3>
+                    <p>Parents actively involved in therapy journey</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Evidence-Based Methods</h3>
+                    <p>Latest research-backed therapeutic approaches</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌈</div>
+                    <h3>Neurodiversity Celebration</h3>
+                    <p>Embracing each child's unique strengths</p>
                 </div>
             </div>
         </section>
 
         <section id="about" class="section">
-            <h2>About Butterfly Bloom CDC</h2>
+            <div class="section-header">
+                <div class="section-badge">ABOUT US</div>
+                <h2>Our Story & Mission</h2>
+                <p class="section-subtitle">Founded with deep commitment to neurodivergent children and their families</p>
+            </div>
             <div class="about-content">
-                <p>At Butterfly Bloom Child Development Center, we believe every child has the potential to flourish—they just need the right environment and support to bloom at their own unique pace.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">At Butterfly Bloom Child Development Center, we believe every child has the potential to flourish—they just need the right environment and support to bloom at their own unique pace.</p>
                 
-                <p>Founded with a deep commitment to neurodivergent children and their families, we provide compassionate, evidence-based therapy services in Visakhapatnam. Our team of experienced therapists specializes in working with children with autism spectrum disorder, ADHD, sensory processing challenges, and developmental delays.</p>
-                
-                <p>We take a holistic, family-centered approach. We don't just work with children—we partner with parents, caregivers, and educators to create consistent support systems that extend beyond our therapy rooms.</p>
-                
-                <p><strong>Our Philosophy:</strong> Every child is unique. Every family's journey is different. We celebrate neurodiversity and focus on building on each child's strengths while gently supporting areas of growth.</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>🎯 Our Mission</h3>
+                        <p>To provide compassionate, evidence-based therapy services that empower children with autism, ADHD, and developmental delays to reach their full potential while supporting families every step of the way.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>💡 Our Philosophy</h3>
+                        <p>Every child is unique. Every family's journey is different. We celebrate neurodiversity and focus on building on each child's strengths while gently supporting areas of growth.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🤝 Our Approach</h3>
+                        <p>We take a holistic, family-centered approach. We don't just work with children—we partner with parents, caregivers, and educators to create consistent support systems.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(142, 68, 173, 0.05), rgba(230, 126, 34, 0.05)); border-radius: 15px;">
+                    <h3 style="color: var(--primary-purple); margin-bottom: 1rem; font-size: 1.5rem;">🌟 Our Team's Expertise</h3>
+                    <p style="color: var(--text-light); line-height: 1.8;">Our team brings together professionals with diverse experience from Visakhapatnam, Hyderabad, Chennai, Kerala, and international exposure from the USA and UK. We've worked with over 500 families in and around Visakhapatnam, bringing the latest therapeutic approaches and genuine passion for helping children thrive.</p>
+                </div>
             </div>
         </section>
 
         <section id="faq" class="section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h3>What age groups do you work with?</h3>
-                <p>We work with children from 18 months to 14 years old. Early intervention makes a significant difference, but we're here to support children at any stage of their development journey.</p>
+            <div class="section-header">
+                <div class="section-badge">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our services</p>
             </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What age groups do you work with?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work with children from 18 months to 14 years old. Early intervention makes a significant difference, but we're here to support children at any stage of their development journey.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>How do I know if my child needs therapy?</h3>
-                <p>If you've noticed delays in speech, difficulty with social interactions, challenges with daily activities, sensory sensitivities, or behavioral concerns, a consultation can help. Trust your instincts—you know your child best.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I know if my child needs therapy?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you've noticed delays in speech, difficulty with social interactions, challenges with daily activities, sensory sensitivities, or behavioral concerns, a consultation can help. Trust your instincts—you know your child best.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Are your therapists qualified and certified?</h3>
-                <p>Our team brings together professionals registered with the Rehabilitation Council of India (RCI), with diverse experience from Vizag, Hyderabad, Chennai, Kerala, and even international exposure from the USA and UK. We've worked with over 500 families in and around Visakhapatnam. What sets us apart isn't just our qualifications—it's our genuine passion for helping children thrive and our commitment to staying current with the latest therapeutic approaches.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are your therapists qualified and certified?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our team brings together professionals registered with the Rehabilitation Council of India (RCI), with diverse experience from Vizag, Hyderabad, Chennai, Kerala, and even international exposure from the USA and UK. We've worked with over 500 families in and around Visakhapatnam.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Do you offer online therapy sessions?</h3>
-                <p>Yes! We provide both in-person and online therapy sessions. Online sessions work particularly well for parent training, speech therapy, and behavioral consultations, making quality care accessible no matter where you are.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer online therapy sessions?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We provide both in-person and online therapy sessions. Online sessions work particularly well for parent training, speech therapy, and behavioral consultations, making quality care accessible no matter where you are.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>How long does therapy take?</h3>
-                <p>Every child's journey is unique. Some children make rapid progress in a few months, while others benefit from longer-term support. We regularly assess progress and adjust our approach to ensure we're meeting your child's evolving needs.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does therapy take?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every child's journey is unique. Some children make rapid progress in a few months, while others benefit from longer-term support. We regularly assess progress and adjust our approach to ensure we're meeting your child's evolving needs.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>How much does therapy cost and do you accept insurance?</h3>
-                <p>We create personalized therapy plans based on your child's specific needs and your family's goals. Since our online sessions often involve both parent training and direct work with your child, the time commitment can vary. We offer flexible monthly packages to make therapy more accessible. Many families also find that their insurance providers offer reimbursement for therapy services. We're happy to discuss what might work best for your situation—just reach out and let's have a conversation.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does therapy cost?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We create personalized therapy plans based on your child's specific needs and your family's goals. We offer flexible monthly packages to make therapy more accessible. Many families also find that their insurance providers offer reimbursement for therapy services. Contact us to discuss what might work best for your situation.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Can parents observe therapy sessions?</h3>
-                <p>Absolutely! We encourage parent involvement. You're welcome to observe sessions, and we'll regularly share strategies you can use at home to reinforce your child's progress.</p>
-            </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can parents observe therapy sessions?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage parent involvement. You're welcome to observe sessions, and we'll regularly share strategies you can use at home to reinforce your child's progress.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>What should I bring to the first appointment?</h3>
-                <p>Bring any previous assessment reports, medical records, school reports, and a list of your concerns and goals. Most importantly, bring your questions—we're here to listen and support you.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I bring to the first appointment?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bring any previous assessment reports, medical records, school reports, and a list of your concerns and goals. Most importantly, bring your questions—we're here to listen and support you.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Get in Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📍 Location:</strong>
-                    <span>Visakhapatnam, Andhra Pradesh</span>
+        <section id="contact" class="contact-section">
+            <div class="section-header" style="color: white;">
+                <div class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">GET IN TOUCH</div>
+                <h2 style="color: white;">Ready to Start Your Journey?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">We're here to support you and your child every step of the way</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Visakhapatnam<br>Andhra Pradesh, India</p>
                 </div>
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
                     <a href="tel:+919876543210">+91 98765 43210</a>
                 </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
                     <a href="mailto:info@butterflybloomcdc.com">info@butterflybloomcdc.com</a>
                 </div>
-                <div class="contact-item">
-                    <strong>🕐 Hours:</strong>
-                    <span>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</span>
+                <div class="contact-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Hours</h3>
+                    <p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</p>
                 </div>
-                <div class="contact-item">
-                    <strong>💬 WhatsApp:</strong>
-                    <a href="https://wa.me/919876543210">Chat with us on WhatsApp</a>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/919876543210" target="_blank">Chat with us instantly</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📅</div>
+                    <h3>Book Now</h3>
+                    <p>Free consultation available<br>Limited slots per week</p>
                 </div>
             </div>
         </section>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2024 Butterfly Bloom Child Development Center. All rights reserved.</p>
-        <p>🦋 Nurturing potential, celebrating progress, building brighter futures.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>🦋 Butterfly Bloom CDC</h3>
+                <p>Nurturing potential, celebrating progress, building brighter futures</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Butterfly Bloom Child Development Center. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Serving families in Visakhapatnam with compassion and expertise</p>
+            </div>
+        </div>
     </footer>
+
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollTop = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
