@@ -410,6 +410,97 @@
             color: var(--primary-orange);
         }
 
+        /* FAQ Section */
+        .faq {
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--cream);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.8rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-left: 5px solid var(--primary-pink);
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--cream);
+        }
+
+        .faq-question h4 {
+            color: var(--primary-purple);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+            padding-right: 2rem;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary-pink);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 2rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        .faq-answer p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer strong {
+            color: var(--primary-purple);
+        }
+
+        .faq-highlight {
+            background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(233, 30, 99, 0.1));
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--primary-orange);
+        }
+
         /* Blog */
         .blog {
             background: var(--cream);
@@ -494,6 +585,10 @@
         }
 
         /* Testimonials */
+        .testimonials {
+            background: white;
+        }
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -501,7 +596,7 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: var(--cream);
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
@@ -749,6 +844,10 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+
+            .faq-question h4 {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -767,6 +866,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
@@ -886,6 +986,224 @@
                     <h4>School Readiness</h4>
                     <p>Preparation programs for mainstream school integration. Focus on academic readiness, classroom behavior, and independence skills.</p>
                     <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h3>Frequently Asked Questions</h3>
+            <p>Everything you need to know about our therapies and services</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is Speech Therapy and when should my child start?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Speech therapy</strong> helps children develop communication skills, including speaking, understanding language, and social communication. It addresses speech delays, articulation problems, stuttering, and language disorders.</p>
+                    <p><strong>Start therapy if your child:</strong> Isn't speaking by age 2, has unclear speech by age 3, struggles to follow directions, has difficulty expressing needs, or shows frustration when communicating.</p>
+                    <div class="faq-highlight">
+                        <strong>✅ Early intervention is key!</strong> The earlier you start, the better the outcomes. Our RCI-registered speech therapists in Visakhapatnam create personalized programs for each child.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Does online therapy work as effectively as in-person sessions?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Yes! Online therapy is highly effective</strong> and research shows excellent outcomes when delivered by qualified professionals. At Butterfly Bloom CDC, we offer both in-person and online therapy options.</p>
+                    <p><strong>Benefits of Online Therapy:</strong></p>
+                    <p>✅ <strong>Convenience:</strong> No travel time, flexible scheduling, therapy from home comfort<br>
+                    ✅ <strong>Consistency:</strong> Fewer missed sessions due to weather, illness, or travel<br>
+                    ✅ <strong>Parent Involvement:</strong> Parents actively participate and learn techniques<br>
+                    ✅ <strong>Natural Environment:</strong> Children practice skills in their daily setting<br>
+                    ✅ <strong>Technology Engagement:</strong> Kids often respond well to screen-based activities</p>
+                    <div class="faq-highlight">
+                        <strong>🌟 Our Success Rate:</strong> 85% of families report significant progress with online therapy. We use interactive tools, games, and activities that keep children engaged throughout sessions.
+                    </div>
+                    <p><strong>Best for:</strong> Speech therapy, special education tutoring, parent counseling, and follow-up sessions. Some hands-on therapies like sensory integration work best in-person initially, then can transition online.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is Occupational Therapy (OT) and how does it help children?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Occupational Therapy</strong> helps children develop skills needed for daily activities - from self-care to school tasks. It addresses fine motor skills, sensory processing, handwriting, and independence.</p>
+                    <p><strong>OT helps with:</strong> Difficulty holding pencils, poor handwriting, trouble with buttons/zippers, sensory sensitivities (textures, sounds), coordination problems, attention difficulties, and daily routine challenges.</p>
+                    <div class="faq-highlight">
+                        <strong>💪 Real Results:</strong> Children gain confidence, independence, and skills for school success. Our OT programs in Visakhapatnam use play-based activities that make therapy fun and effective.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is ABA Therapy and is it only for autism?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Applied Behavior Analysis (ABA)</strong> is a scientific approach to understanding and changing behavior. While commonly used for autism, it benefits many developmental conditions.</p>
+                    <p><strong>ABA helps with:</strong> Communication skills, social interactions, reducing challenging behaviors, learning new skills, attention and focus, following instructions, and daily living skills.</p>
+                    <p><strong>Who benefits:</strong> Children with autism spectrum disorder, ADHD, developmental delays, behavioral challenges, and learning disabilities.</p>
+                    <div class="faq-highlight">
+                        <strong>🎯 Evidence-Based:</strong> ABA is the gold standard for autism intervention with decades of research supporting its effectiveness. Our certified therapists create individualized programs based on each child's needs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How long does therapy take to show results?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Timeline varies by child and condition,</strong> but most families notice improvements within 3-6 months of consistent therapy.</p>
+                    <p><strong>Factors affecting progress:</strong> Severity of condition, age at start, consistency of sessions, home practice, and family involvement.</p>
+                    <p><strong>Typical timelines:</strong><br>
+                    • <strong>Speech delays:</strong> 6-12 months for significant improvement<br>
+                    • <strong>Occupational therapy:</strong> 3-9 months for skill development<br>
+                    • <strong>ABA therapy:</strong> 6-18 months for behavioral changes<br>
+                    • <strong>Special education:</strong> Ongoing support with quarterly progress</p>
+                    <div class="faq-highlight">
+                        <strong>📊 We track progress:</strong> Regular assessments every 3 months show measurable improvements. Parents receive detailed progress reports and home activity recommendations.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is Sensory Integration Therapy?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Sensory Integration Therapy</strong> helps children who struggle to process sensory information (touch, sound, sight, movement, taste, smell). It's crucial for children with sensory processing disorder.</p>
+                    <p><strong>Signs your child needs sensory therapy:</strong> Oversensitive to textures/sounds/lights, seeks excessive movement, poor coordination, difficulty with transitions, meltdowns in busy environments, picky eating, or avoids messy play.</p>
+                    <div class="faq-highlight">
+                        <strong>🎨 Our Approach:</strong> We use specialized equipment (swings, weighted items, textured materials) in a sensory gym environment. Children learn to regulate responses and feel more comfortable in daily situations.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Are your therapists qualified and certified?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Yes! All our therapists are RCI registered</strong> (Rehabilitation Council of India) and hold professional degrees in their specializations.</p>
+                    <p><strong>Our team includes:</strong><br>
+                    • <strong>Speech Therapists:</strong> BASLP/MASLP degrees with RCI registration<br>
+                    • <strong>Occupational Therapists:</strong> BOT/MOT degrees with clinical experience<br>
+                    • <strong>ABA Therapists:</strong> Certified behavior analysts and trained technicians<br>
+                    • <strong>Special Educators:</strong> B.Ed/M.Ed in Special Education</p>
+                    <div class="faq-highlight">
+                        <strong>🏆 8+ Years Experience:</strong> Our team has collectively served 500+ families in Visakhapatnam with proven results and continuous professional development.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How much does therapy cost and do you accept insurance?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Therapy costs vary by service type and session duration.</strong> We offer flexible packages and payment plans to make therapy accessible.</p>
+                    <p><strong>Pricing structure:</strong><br>
+                    • Individual sessions: ₹800-1500 per session<br>
+                    • Package discounts: 10-20% off for monthly packages<br>
+                    • Online sessions: Slightly lower rates than in-person<br>
+                    • Assessment fees: One-time comprehensive evaluation</p>
+                    <p><strong>Insurance:</strong> We provide detailed invoices and reports that you can submit to your insurance provider for reimbursement. Many families successfully claim under health insurance policies.</p>
+                    <div class="faq-highlight">
+                        <strong>💰 Free Consultation:</strong> First consultation is free! We'll assess your child's needs and recommend the best therapy plan within your budget.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Can my child attend regular school while receiving therapy?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Absolutely! Most children continue regular school</strong> while receiving therapy. In fact, therapy often helps children succeed better in school.</p>
+                    <p><strong>We offer:</strong><br>
+                    • Flexible scheduling (after school, weekends)<br>
+                    • School collaboration and teacher consultations<br>
+                    • IEP (Individualized Education Plan) support<br>
+                    • Homework and academic support in special education<br>
+                    • School readiness programs for younger children</p>
+                    <div class="faq-highlight">
+                        <strong>🎒 School Integration:</strong> Our goal is mainstream school success. We work closely with schools in Visakhapatnam to ensure your child gets appropriate support in the classroom.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What should I expect in the first session?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>The first session is an assessment and consultation</strong> where we understand your child's needs and create a personalized therapy plan.</p>
+                    <p><strong>First visit includes:</strong><br>
+                    1. <strong>Parent Interview:</strong> Discuss concerns, medical history, developmental milestones<br>
+                    2. <strong>Child Assessment:</strong> Standardized tests and observations (play-based, non-stressful)<br>
+                    3. <strong>Goal Setting:</strong> Identify priorities and create therapy objectives<br>
+                    4. <strong>Treatment Plan:</strong> Recommend therapy type, frequency, and duration<br>
+                    5. <strong>Questions:</strong> Time for all your concerns and doubts</p>
+                    <div class="faq-highlight">
+                        <strong>⏱️ Duration:</strong> First assessment takes 60-90 minutes. Bring any previous reports, school records, or medical documents. Children can bring a favorite toy for comfort!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Do you provide parent training and home programs?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Yes! Parent involvement is crucial for success.</strong> We provide comprehensive parent training and home activity programs.</p>
+                    <p><strong>Parent support includes:</strong><br>
+                    • Weekly home activity sheets with specific exercises<br>
+                    • Monthly parent training sessions<br>
+                    • Video demonstrations of techniques<br>
+                    • WhatsApp support for daily questions<br>
+                    • Parent counseling for emotional support<br>
+                    • Sibling involvement strategies</p>
+                    <div class="faq-highlight">
+                        <strong>👨‍👩‍👧 Family-Centered Approach:</strong> Research shows children progress 3x faster when families practice at home. We empower parents to become co-therapists in their child's development journey.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What age groups do you work with?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>We serve children from 18 months to 16 years,</strong> with specialized programs for different age groups.</p>
+                    <p><strong>Age-specific programs:</strong><br>
+                    • <strong>Toddlers (18 months - 3 years):</strong> Early intervention, speech stimulation, sensory play<br>
+                    • <strong>Preschool (3-6 years):</strong> School readiness, social skills, communication development<br>
+                    • <strong>School Age (6-12 years):</strong> Academic support, social skills, independence training<br>
+                    • <strong>Teens (12-16 years):</strong> Life skills, vocational training, social communication</p>
+                    <div class="faq-highlight">
+                        <strong>🌱 Early Intervention:</strong> The earlier we start, the better! Brain plasticity is highest in early years, making therapy most effective for younger children.
+                    </div>
                 </div>
             </div>
         </div>
@@ -1133,6 +1451,7 @@
                 <ul class="footer-links">
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Our Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#blog">Blog & Resources</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact Us</a></li>
@@ -1167,6 +1486,21 @@
         function toggleMenu() {
             const navMenu = document.querySelector('.nav-menu');
             navMenu.classList.toggle('active');
+        }
+
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const allFaqItems = document.querySelectorAll('.faq-item');
+            
+            // Close all other FAQ items
+            allFaqItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
         }
 
         // Smooth scrolling for anchor links
