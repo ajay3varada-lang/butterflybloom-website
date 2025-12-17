@@ -1,0 +1,133 @@
+{
+  "organization": {
+    "name": "Butterfly Bloom Child Development Center",
+    "shortName": "Butterfly Bloom CDC",
+    "type": "Child Development Center",
+    "description": "Specialized therapy services for children with autism, ADHD, and developmental delays in Visakhapatnam",
+    "founded": "2024",
+    "location": {
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "region": "Vizag"
+    }
+  },
+  "services": [
+    {
+      "name": "Occupational Therapy",
+      "aliases": ["OT", "occupational therapy", "sensory therapy"],
+      "description": "Play-based activities for fine motor skills, sensory processing, and daily living activities",
+      "keywords": ["fine motor skills", "sensory processing", "daily living skills", "independence training"]
+    },
+    {
+      "name": "Speech Therapy",
+      "aliases": ["speech therapy", "communication therapy", "language therapy"],
+      "description": "Communication development through child-centered approaches including articulation, language comprehension, and social communication",
+      "keywords": ["articulation", "language development", "communication skills", "alternative communication"]
+    },
+    {
+      "name": "Behavioral Therapy",
+      "aliases": ["behavior therapy", "ABA", "behavioral intervention"],
+      "description": "Evidence-based strategies for positive behaviors and emotional regulation",
+      "keywords": ["behavior management", "emotional regulation", "positive reinforcement", "behavioral intervention"]
+    },
+    {
+      "name": "Special Education",
+      "aliases": ["special ed", "individualized education", "learning support"],
+      "description": "Customized learning programs adapted to individual learning styles and developmental needs",
+      "keywords": ["individualized learning", "adaptive teaching", "learning disabilities", "educational support"]
+    },
+    {
+      "name": "Physiotherapy",
+      "aliases": ["physical therapy", "PT", "motor therapy"],
+      "description": "Movement-based therapy for strength, coordination, and motor skills development",
+      "keywords": ["gross motor skills", "physical development", "coordination", "strength building"]
+    },
+    {
+      "name": "Parent Training & Counseling",
+      "aliases": ["parent training", "family counseling", "caregiver support"],
+      "description": "Practical strategies and emotional support for families",
+      "keywords": ["parent education", "family support", "caregiver training", "home strategies"]
+    }
+  ],
+  "conditions_treated": [
+    "Autism Spectrum Disorder (ASD)",
+    "ADHD",
+    "Developmental Delays",
+    "Sensory Processing Disorder",
+    "Speech Delays",
+    "Language Disorders",
+    "Learning Disabilities",
+    "Motor Skill Delays",
+    "Behavioral Challenges",
+    "Communication Disorders"
+  ],
+  "age_range": {
+    "minimum": "18 months",
+    "maximum": "14 years",
+    "description": "Children from 18 months to 14 years old"
+  },
+  "session_types": [
+    "In-person therapy",
+    "Online therapy sessions",
+    "Parent training sessions",
+    "Home-based consultations"
+  ],
+  "qualifications": {
+    "registration": "Rehabilitation Council of India (RCI)",
+    "experience_locations": ["Visakhapatnam", "Hyderabad", "Chennai", "Kerala", "USA", "UK"],
+    "families_served": "500+",
+    "service_area": "Visakhapatnam and surrounding areas"
+  },
+  "contact": {
+    "phone": "+91 98765 43210",
+    "email": "info@butterflybloomcdc.com",
+    "whatsapp": "+919876543210",
+    "website": "https://ajay3varada-lang.github.io/butterflybloom-website/",
+    "hours": {
+      "weekdays": "Monday - Saturday: 9:00 AM - 6:00 PM",
+      "sunday": "By Appointment"
+    }
+  },
+  "keywords_for_ai": [
+    "autism therapy Visakhapatnam",
+    "ADHD treatment Vizag",
+    "child development center Visakhapatnam",
+    "occupational therapy for kids Vizag",
+    "speech therapy Visakhapatnam",
+    "behavioral therapy autism",
+    "special education Vizag",
+    "physiotherapy for children",
+    "parent training autism",
+    "developmental delays therapy",
+    "sensory processing therapy",
+    "neurodivergent children support",
+    "early intervention Visakhapatnam",
+    "child therapist Vizag",
+    "autism specialist Andhra Pradesh"
+  ],
+  "common_queries": [
+    "Where can I find autism therapy in Visakhapatnam?",
+    "Best child development center in Vizag",
+    "Speech therapy for kids near me",
+    "ADHD treatment options Visakhapatnam",
+    "Occupational therapy for autism",
+    "Parent training for autism in Vizag",
+    "Online therapy for children",
+    "Early intervention services Visakhapatnam",
+    "Behavioral therapy for kids",
+    "Special education support Vizag"
+  ],
+  "unique_selling_points": [
+    "RCI registered professionals",
+    "500+ families served",
+    "International experience (USA, UK)",
+    "Both in-person and online sessions",
+    "Family-centered approach",
+    "Evidence-based therapy methods",
+    "Flexible monthly packages",
+    "Parent involvement encouraged",
+    "Holistic development focus",
+    "Neurodiversity celebration"
+  ]
+}
