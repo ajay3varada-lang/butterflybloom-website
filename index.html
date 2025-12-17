@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Butterfly Bloom Child Development Center in Visakhapatnam - RCI Registered Speech Therapy, Occupational Therapy, ABA Therapy, Special Education. Best child therapist in Vizag MVP Colony. 8+ Years Experience, 500+ Families Served.">
-    <meta name="keywords" content="child development center visakhapatnam, speech therapy vizag, occupational therapy vizag, ABA therapy visakhapatnam, special education vizag, child therapist MVP colony, autism therapy vizag, speech delay treatment visakhapatnam, best child therapist vizag, RCI registered therapist visakhapatnam, sensory integration therapy vizag, early intervention visakhapatnam">
+    <meta name="keywords" content="child development center visakhapatnam, speech therapy vizag, occupational therapy vizag, ABA therapy visakhapatnam, special education vizag, child therapist MVP colony, autism therapy vizag, speech delay treatment visakhapatnam, best child therapist vizag, RCI registered therapist visakhapatnam, sensory integration therapy vizag, early intervention visakhapatnam, speech therapist near me vizag, best OT in visakhapatnam, autism center vizag, special needs school visakhapatnam">
     <meta name="author" content="Butterfly Bloom Child Development Center">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -454,10 +454,96 @@
             color: var(--primary-orange);
         }
 
+        /* Blog Section */
+        .blog {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .blog-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content h4 {
+            font-size: 1.4rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .blog-date {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .blog-link {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .blog-link:hover {
+            color: var(--primary-orange);
+        }
+
         /* Testimonials Section */
         .testimonials {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: white;
         }
 
         .testimonials-grid {
@@ -521,7 +607,7 @@
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--cream);
         }
 
         .contact-content {
@@ -620,22 +706,30 @@
         }
 
         .social-links a {
-            font-size: 1.8rem;
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: white;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+            background: rgba(255,255,255,0.1);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
         }
 
         .social-links a:hover {
             transform: translateY(-3px);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
         }
 
         .social-handle {
-            font-size: 1rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .footer-links {
@@ -705,6 +799,7 @@
             }
 
             .services-grid,
+            .blog-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
@@ -730,6 +825,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
             </ul>
@@ -911,6 +1007,93 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="section-header">
+            <h3>Expert Insights & Resources</h3>
+            <p>Latest articles on child development and therapy in Visakhapatnam</p>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Speech therapy for children in Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Speech Therapy Vizag</span>
+                    <h4>Top 10 Signs Your Child Needs Speech Therapy in Visakhapatnam</h4>
+                    <p class="blog-excerpt">Discover the early warning signs of speech delays in children. Learn when to seek professional help from RCI registered speech therapists in MVP Colony, Vizag. Expert guidance for parents in Visakhapatnam.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">December 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Occupational therapy Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">OT Therapy Vizag</span>
+                    <h4>Benefits of Occupational Therapy for Children in Vizag</h4>
+                    <p class="blog-excerpt">How occupational therapy helps children with sensory processing, fine motor skills, and daily activities. Expert OT services available at Butterfly Bloom CDC, MVP Colony, Visakhapatnam.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">December 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Autism therapy Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Autism Support Vizag</span>
+                    <h4>Understanding Autism Spectrum Disorder: A Guide for Vizag Parents</h4>
+                    <p class="blog-excerpt">Comprehensive guide to autism diagnosis, early intervention, and ABA therapy options in Visakhapatnam. Find the best autism support services in MVP Colony, Vizag.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">November 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Special education Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Special Education Vizag</span>
+                    <h4>Choosing the Right Special Education Program in Visakhapatnam</h4>
+                    <p class="blog-excerpt">Expert tips for selecting special education services for children with learning disabilities in Vizag. RCI registered special educators at Butterfly Bloom CDC, MVP Colony.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">November 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Early intervention Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Early Intervention Vizag</span>
+                    <h4>Why Early Intervention Matters: Vizag Parents' Complete Guide</h4>
+                    <p class="blog-excerpt">The critical importance of early intervention for developmental delays. Access expert early intervention services in Visakhapatnam at Butterfly Bloom CDC, MVP Colony.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">October 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Child development center Visakhapatnam" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Child Development Vizag</span>
+                    <h4>Best Child Development Centers in Visakhapatnam: What to Look For</h4>
+                    <p class="blog-excerpt">Essential factors when choosing a child development center in Vizag. RCI registration, qualified therapists, and evidence-based practices at Butterfly Bloom CDC, MVP Colony.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">October 2024</span>
+                        <a href="#contact" class="blog-link">Read More →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="section-header">
@@ -1046,11 +1229,17 @@
                 <h4>Butterfly Bloom CDC</h4>
                 <p>Nurturing potential and celebrating progress in every child. RCI registered child development center in Visakhapatnam offering comprehensive therapy services.</p>
                 <div class="social-links">
-                    <a href="https://wa.me/918019589810" target="_blank">
-                        💬 <span class="social-handle">WhatsApp</span>
+                    <a href="https://wa.me/918019589810" target="_blank" aria-label="WhatsApp">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        <span class="social-handle">WhatsApp</span>
                     </a>
-                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank">
-                        📷 <span class="social-handle">@butterflybloom_cdc</span>
+                    <a href="https://instagram.com/butterflybloom_cdc" target="_blank" aria-label="Instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span class="social-handle">@butterflybloom_cdc</span>
                     </a>
                 </div>
             </div>
@@ -1061,6 +1250,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1069,11 +1259,11 @@
             <div class="footer-section">
                 <h4>Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#services">Speech Therapy</a></li>
-                    <li><a href="#services">Occupational Therapy</a></li>
-                    <li><a href="#services">ABA Therapy</a></li>
-                    <li><a href="#services">Special Education</a></li>
-                    <li><a href="#services">Early Intervention</a></li>
+                    <li><a href="#services">Speech Therapy Vizag</a></li>
+                    <li><a href="#services">Occupational Therapy Vizag</a></li>
+                    <li><a href="#services">ABA Therapy Visakhapatnam</a></li>
+                    <li><a href="#services">Special Education Vizag</a></li>
+                    <li><a href="#services">Early Intervention Vizag</a></li>
                 </ul>
             </div>
 
@@ -1090,7 +1280,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2025 Butterfly Bloom Child Development Center. All rights reserved.</p>
+            <p>© 2025 Butterfly Bloom Child Development Center Visakhapatnam. All rights reserved. | Best Child Therapist in Vizag MVP Colony | RCI Registered Speech Therapy, Occupational Therapy, ABA Therapy</p>
         </div>
     </footer>
 
