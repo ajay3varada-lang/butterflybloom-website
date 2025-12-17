@@ -95,7 +95,10 @@
         "ratingValue": "4.9",
         "reviewCount": "500",
         "bestRating": "5"
-      }
+      },
+      "sameAs": [
+        "https://www.instagram.com/butterflybloom.cdc"
+      ]
     }
     </script>
     
@@ -130,6 +133,25 @@
           }
         }
       ]
+    }
+    </script>
+    
+    <!-- Blog Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Butterfly Bloom CDC Blog",
+      "description": "Expert insights on autism therapy, ADHD treatment, child development, and parenting strategies in Visakhapatnam",
+      "url": "https://ajay3varada-lang.github.io/butterflybloom-website/#blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Butterfly Bloom Child Development Center",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1c1a6771-42e8-4b13-865e-62db375bf446/2025-12-17T11-51-30-455Z-04d4bbc6-chat-image-1765972290437-0.jpg"
+        }
+      }
     }
     </script>
     
@@ -388,6 +410,32 @@
             color: white;
         }
 
+        /* Instagram Badge */
+        .instagram-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 25px rgba(188, 24, 136, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .instagram-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(188, 24, 136, 0.4);
+        }
+
+        .instagram-icon {
+            font-size: 1.5rem;
+        }
+
         /* Stats Section */
         .stats-section {
             background: white;
@@ -540,6 +588,81 @@
             color: var(--primary-orange);
             font-weight: bold;
             font-size: 1.2rem;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.4s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px var(--shadow-hover);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .blog-category {
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(230, 126, 34, 0.1));
+            color: var(--primary-purple);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .blog-card h3 {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-purple);
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
         }
 
         /* About Section */
@@ -900,7 +1023,8 @@
             .services-grid,
             .features-grid,
             .about-grid,
-            .contact-grid {
+            .contact-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -935,7 +1059,8 @@
 
             .service-card,
             .about-content,
-            .contact-card {
+            .contact-card,
+            .blog-card {
                 padding: 1.5rem;
             }
         }
@@ -956,6 +1081,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -974,6 +1100,10 @@
                 <a href="#contact" class="cta-button">📞 Book Your Session</a>
                 <a href="#services" class="cta-button cta-button-secondary">🔍 Explore Services</a>
             </div>
+            <a href="https://www.instagram.com/butterflybloom.cdc" target="_blank" class="instagram-badge">
+                <span class="instagram-icon">📷</span>
+                Follow us @butterflybloom.cdc
+            </a>
         </div>
     </section>
 
@@ -1072,6 +1202,93 @@
                         <li>Progress monitoring tools</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="section-header">
+                <div class="section-badge">EXPERT INSIGHTS</div>
+                <h2>Latest from Our Blog</h2>
+                <p class="section-subtitle">Evidence-based guidance for parents and caregivers in Visakhapatnam</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Understanding Autism in Children" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Autism</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>Understanding Autism Spectrum Disorder: A Parent's Guide in Visakhapatnam</h3>
+                        <p>Early signs, diagnosis process, and how to access quality autism therapy services in Vizag. Learn about RCI-registered therapists and evidence-based interventions available locally.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="ADHD Management Strategies" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">ADHD</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>ADHD in Children: Symptoms, Treatment & Support in Andhra Pradesh</h3>
+                        <p>Comprehensive guide to recognizing ADHD symptoms, behavioral therapy approaches, and finding specialized ADHD treatment centers in Visakhapatnam and surrounding areas.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80" alt="Speech Therapy Benefits" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Speech Therapy</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>When Does Your Child Need Speech Therapy? Expert Advice from Vizag Therapists</h3>
+                        <p>Identifying speech delays, communication milestones, and how speech therapy can help children in Visakhapatnam develop language skills. Online and in-person options available.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=80" alt="Sensory Processing Disorder" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Occupational Therapy</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>Sensory Processing Disorder: Occupational Therapy Solutions in Visakhapatnam</h3>
+                        <p>Understanding sensory sensitivities and how occupational therapy helps children regulate sensory input. Find qualified OT specialists in Vizag for sensory integration therapy.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=800&q=80" alt="Early Intervention Importance" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Early Intervention</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>The Power of Early Intervention: Why Starting Therapy Early Matters in Vizag</h3>
+                        <p>Research-backed benefits of early childhood intervention for developmental delays. Access early intervention programs and child development centers in Visakhapatnam.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" alt="Parent Training Programs" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Parent Support</span>
+                            <span>📅 Dec 2024</span>
+                        </div>
+                        <h3>Parent Training Programs: Empowering Families in Visakhapatnam</h3>
+                        <p>How parent training enhances therapy outcomes for children with autism and ADHD. Join parent support groups and counseling sessions available in Vizag and online.</p>
+                        <a href="#blog" class="read-more">Read More →</a>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -1268,9 +1485,9 @@
                     <a href="https://wa.me/919876543210" target="_blank">Chat with us instantly</a>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">📅</div>
-                    <h3>Book Now</h3>
-                    <p>Free consultation available<br>Limited slots per week</p>
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <a href="https://www.instagram.com/butterflybloom.cdc" target="_blank">@butterflybloom.cdc</a>
                 </div>
             </div>
         </section>
@@ -1285,10 +1502,12 @@
             <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
+                <a href="#blog">Blog</a>
                 <a href="#why-us">Why Us</a>
                 <a href="#about">About</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                <a href="https://www.instagram.com/butterflybloom.cdc" target="_blank">Instagram</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Butterfly Bloom Child Development Center. All rights reserved.</p>
