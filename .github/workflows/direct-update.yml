@@ -1,0 +1,45 @@
+name: Direct Contact Update
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Update contacts with sed
+        run: |
+          # Instagram handle (dot to underscore)
+          sed -i 's|butterflybloom\.cdc|butterflybloom_cdc/|g' index.html
+          sed -i 's|@butterflybloom\.cdc|@butterflybloom_cdc|g' index.html
+          
+          # Phone number
+          sed -i 's|+919876543210|+918019589810|g' index.html
+          sed -i 's|+91 98765 43210|+91 80195 89810|g' index.html
+          
+          # Email
+          sed -i 's|info@butterflybloomcdc\.com|hello@butterflybloomcdc.com|g' index.html
+          
+          # Address in schema - add street address
+          sed -i 's|"addressLocality": "Visakhapatnam",|"streetAddress": "2nd Floor, Door No: 1, 53-8/2, Sector 1, MVP Colony",\n        "addressLocality": "Visakhapatnam",\n        "postalCode": "530017",|g' index.html
+          
+          # Hours - 6 PM to 7 PM
+          sed -i 's|"closes": "18:00"|"closes": "19:00"|g' index.html
+          
+          # Location in contact section
+          sed -i 's|<p>Visakhapatnam<br>Andhra Pradesh, India</p>|<p>2nd Floor, Door No: 1, 53-8/2<br>Sector 1, MVP Colony<br>Visakhapatnam, AP 530017</p>|g' index.html
+          
+          # Hours in contact section
+          sed -i 's|<p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</p>|<p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: By Appointment<br><strong>📅 On Appointment Basis Only</strong></p>|g' index.html
+      
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Update contact details: Instagram, phone, email, address, hours" || echo "No changes"
+          git push
